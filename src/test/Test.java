@@ -1,10 +1,7 @@
 package test;
 
 import model.ListNode;
-import questions.AddTwoNumbers;
-import questions.LongestCommonPrefix;
-import questions.RomanInteger;
-import questions.Sum;
+import questions.*;
 
 import java.util.List;
 
@@ -45,6 +42,11 @@ public class Test {
 //        AddTwoNumbers.print(l2);
         ListNode res = new AddTwoNumbers().addTwoNumbers(l1, l2);
         AddTwoNumbers.print(res);
+    }
+
+    public static void longestSubstring(){
+        String s = "dvdf";
+        System.out.println(new LongestSubstring().lengthOfLongestSubstring(s));
     }
 
 }

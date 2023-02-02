@@ -6,8 +6,15 @@ public class Main {
 //        Test.longestCommonPrefix();
         long stime = System.currentTimeMillis();
 //        Test.sum();
-        Test.addTwoNumbers();
+//        Test.addTwoNumbers();
+        Test.longestSubstring();
         long etime = System.currentTimeMillis();
+
+
+
+
+
+
         System.out.println("time: " + (etime - stime));
     }
 }
