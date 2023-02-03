@@ -1,6 +1,5 @@
 package questions;
 
-import javax.xml.stream.events.Characters;
 import java.util.*;
 
 /**
