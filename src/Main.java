@@ -7,7 +7,8 @@ public class Main {
         long stime = System.currentTimeMillis();
 //        Test.sum();
 //        Test.addTwoNumbers();
-        Test.longestSubstring();
+//        Test.longestSubstring();
+        Test.longestPalindromicSubstring();
         long etime = System.currentTimeMillis();
 
 
