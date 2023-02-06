@@ -9,7 +9,8 @@ public class Main {
 //        Test.addTwoNumbers();
 //        Test.longestSubstring();
 //        Test.longestPalindromicSubstring();
-        Test.zigzagConversion();
+//        Test.zigzagConversion();
+        Test.shuffleTheArray();
         long etime = System.currentTimeMillis();
 
 

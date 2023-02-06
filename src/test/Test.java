@@ -3,6 +3,7 @@ package test;
 import model.ListNode;
 import questions.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Test {
@@ -57,6 +58,11 @@ public class Test {
     public static void zigzagConversion(){
         String s = "ABCDEFGHIJKLMNOPQR";
         System.out.println(new ZigzagConversion().convert(s, 5));
+    }
+
+    public static void shuffleTheArray(){
+        int[] nums = {1, 2, 3, 4, 4, 3, 2, 1};
+        System.out.println(Arrays.toString(new ShuffleTheArray().shuffle(nums, 4)));
     }
 
 }
