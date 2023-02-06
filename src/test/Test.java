@@ -54,4 +54,9 @@ public class Test {
         System.out.println(new LongestPalindromicSubstring().longestPalindrome(s));
     }
 
+    public static void zigzagConversion(){
+        String s = "ABCDEFGHIJKLMNOPQR";
+        System.out.println(new ZigzagConversion().convert(s, 5));
+    }
+
 }

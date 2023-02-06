@@ -8,7 +8,8 @@ public class Main {
 //        Test.sum();
 //        Test.addTwoNumbers();
 //        Test.longestSubstring();
-        Test.longestPalindromicSubstring();
+//        Test.longestPalindromicSubstring();
+        Test.zigzagConversion();
         long etime = System.currentTimeMillis();
 
 
