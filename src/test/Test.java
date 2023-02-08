@@ -65,4 +65,9 @@ public class Test {
         System.out.println(Arrays.toString(new ShuffleTheArray().shuffle(nums, 4)));
     }
 
+    public static void reverseInteger(){
+        int x = 1534236469;
+        System.out.println(new ReverseInteger().reverse(x));
+    }
+
 }

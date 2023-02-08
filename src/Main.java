@@ -10,7 +10,8 @@ public class Main {
 //        Test.longestSubstring();
 //        Test.longestPalindromicSubstring();
 //        Test.zigzagConversion();
-        Test.shuffleTheArray();
+//        Test.shuffleTheArray();
+        Test.reverseInteger();
         long etime = System.currentTimeMillis();
 
 
