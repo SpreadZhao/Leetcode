@@ -70,4 +70,13 @@ public class Test {
         System.out.println(new ReverseInteger().reverse(x));
     }
 
+    public static void stringToInteger(){
+        String s = "   -234523sadf";
+        String s2 = "00000-42a1234";
+        String s3 = "-13+8";
+        String s4 = "123-";
+        String s5 = "+-12";
+        System.out.println(new StringToInteger().myAtoi(s3));
+    }
+
 }
