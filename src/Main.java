@@ -12,7 +12,8 @@ public class Main {
 //        Test.zigzagConversion();
 //        Test.shuffleTheArray();
 //        Test.reverseInteger();
-        Test.stringToInteger();
+//        Test.stringToInteger();
+        Test.palindromeNumber();
         long etime = System.currentTimeMillis();
 
 

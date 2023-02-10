@@ -79,4 +79,9 @@ public class Test {
         System.out.println(new StringToInteger().myAtoi(s3));
     }
 
+    public static void palindromeNumber(){
+        int x = 121;
+        System.out.println(new PalindromeNumber().isPalindrome2(x));
+    }
+
 }
