@@ -84,4 +84,9 @@ public class Test {
         System.out.println(new PalindromeNumber().isPalindrome2(x));
     }
 
+    public static void integerToRoman(){
+        int num = 10;
+        System.out.println(new IntegertoRoman().intToRoman(num));
+    }
+
 }
