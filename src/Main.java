@@ -14,7 +14,8 @@ public class Main {
 //        Test.reverseInteger();
 //        Test.stringToInteger();
 //        Test.palindromeNumber();
-        Test.integerToRoman();
+//        Test.integerToRoman();
+        Test.addBinary();
         long etime = System.currentTimeMillis();
 
 

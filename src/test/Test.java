@@ -89,4 +89,10 @@ public class Test {
         System.out.println(new IntegertoRoman().intToRoman(num));
     }
 
+    public static void addBinary(){
+        String a = "1010";
+        String b = "1011";
+        System.out.println(new AddBinary().addBinary(a, b));
+    }
+
 }
