@@ -95,4 +95,10 @@ public class Test {
         System.out.println(new AddBinary().addBinary(a, b));
     }
 
+    public static void addToArrayFormOfInteger(){
+        int[] num = {9,9,9,9,9,9,9,9,9,9};
+        int k = 1;
+        System.out.println(new AddToArrayFormInteger().addToArrayForm2(num, k));
+    }
+
 }
