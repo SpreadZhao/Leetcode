@@ -1,8 +1,10 @@
 package test;
 
 import model.ListNode;
+import model.TreeNode;
 import questions.*;
 
+import javax.swing.plaf.basic.BasicTreeUI;
 import java.util.Arrays;
 import java.util.List;
 
@@ -99,6 +101,20 @@ public class Test {
         int[] num = {9,9,9,9,9,9,9,9,9,9};
         int k = 1;
         System.out.println(new AddToArrayFormInteger().addToArrayForm2(num, k));
+    }
+
+    public static void maxDepthOfBianryTree(){
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        TreeNode right = new TreeNode(20);
+        root.right = right;
+        right.left = new TreeNode(15);
+        right.right = new TreeNode(7);
+
+        TreeNode root2 = new TreeNode(1);
+        root2.left = null;
+        root2.right = new TreeNode(2);
+        System.out.println(new MaxDepthOfBinaryTree().maxDepth2(root2));
     }
 
 }

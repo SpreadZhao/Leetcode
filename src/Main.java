@@ -16,7 +16,8 @@ public class Main {
 //        Test.palindromeNumber();
 //        Test.integerToRoman();
 //        Test.addBinary();
-        Test.addToArrayFormOfInteger();
+//        Test.addToArrayFormOfInteger();
+        Test.maxDepthOfBianryTree();
         long etime = System.currentTimeMillis();
 
 
