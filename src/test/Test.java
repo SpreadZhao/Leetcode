@@ -117,4 +117,10 @@ public class Test {
         System.out.println(new MaxDepthOfBinaryTree().maxDepth2(root2));
     }
 
+    public static void regularExpressionMatching(){
+        String s = "aa";
+        String p = "a";
+        System.out.println(new ExpressionMatching().isMatch(s, p));
+    }
+
 }
