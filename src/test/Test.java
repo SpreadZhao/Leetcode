@@ -131,4 +131,15 @@ public class Test {
         System.out.println(new SearchInsertPosition().searchInsert(nums, target));
     }
 
+    public static void singleElementInASortedArray(){
+        int[] nums = {1,1,2,3,3,4,4,8,8};
+        int[] nums2 = {3,3,7,7,10,11,11};
+        System.out.println(new SingleElementInASortedArray().singleNonDuplicate(nums2));
+    }
+
+    public static void containerWithMostWater(){
+        int[] height = {1,8,6,2,5,4,8,3,7};
+        System.out.println(new ContainerWithMostWater().maxArea1(height));
+    }
+
 }

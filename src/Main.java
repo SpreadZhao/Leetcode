@@ -19,7 +19,9 @@ public class Main {
 //        Test.addToArrayFormOfInteger();
 //        Test.maxDepthOfBianryTree();
 //        Test.regularExpressionMatching();
-        Test.searchInsertPosition();
+//        Test.searchInsertPosition();
+//        Test.singleElementInASortedArray();
+        Test.containerWithMostWater();
         long etime = System.currentTimeMillis();
 
 
