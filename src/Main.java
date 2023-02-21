@@ -18,7 +18,8 @@ public class Main {
 //        Test.addBinary();
 //        Test.addToArrayFormOfInteger();
 //        Test.maxDepthOfBianryTree();
-        Test.regularExpressionMatching();
+//        Test.regularExpressionMatching();
+        Test.searchInsertPosition();
         long etime = System.currentTimeMillis();
 
 

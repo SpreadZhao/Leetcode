@@ -118,9 +118,17 @@ public class Test {
     }
 
     public static void regularExpressionMatching(){
-        String s = "aa";
-        String p = "a";
-        System.out.println(new ExpressionMatching().isMatch(s, p));
+        String s = "aab";
+        String p = "c*a*b";
+        String s1 = "aaa";
+        String p1 = "a*a";
+        System.out.println(new ExpressionMatching().isMatch(s1, p1));
+    }
+
+    public static void searchInsertPosition(){
+        int[] nums = {1, 3};
+        int target = 4;
+        System.out.println(new SearchInsertPosition().searchInsert(nums, target));
     }
 
 }
