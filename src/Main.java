@@ -21,7 +21,9 @@ public class Main {
 //        Test.regularExpressionMatching();
 //        Test.searchInsertPosition();
 //        Test.singleElementInASortedArray();
-        Test.containerWithMostWater();
+//        Test.containerWithMostWater();
+//        Test.sumClosest();
+        Test.sltoBst();
         long etime = System.currentTimeMillis();
 
 

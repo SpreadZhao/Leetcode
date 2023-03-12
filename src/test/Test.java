@@ -142,4 +142,18 @@ public class Test {
         System.out.println(new ContainerWithMostWater().maxArea1(height));
     }
 
+    public static void sumClosest(){
+        int[] nums = {-1, 2, 1, -4};
+        System.out.println(new SumClosest().threeSumClosest(nums, 1));
+    }
+
+    public static void sltoBst(){
+        ListNode l5 = new ListNode(9);
+        ListNode l4 = new ListNode(5, l5);
+        ListNode l3 = new ListNode(0, l4);
+        ListNode l2 = new ListNode(-3, l3);
+        ListNode l1 = new ListNode(-10, l2);
+        new SLToBST().sortedListToBST(l1);
+    }
+
 }
