@@ -156,4 +156,26 @@ public class Test {
         new SLToBST().sortedListToBST(l1);
     }
 
+    public static void symmetricTree(){
+        TreeNode t1 = new TreeNode(3);
+        TreeNode t2 = new TreeNode(2, null, t1);
+        TreeNode t3 = new TreeNode(3);
+        TreeNode t4 = new TreeNode(2, null, t3);
+        TreeNode t5 = new TreeNode(1, t2, t4);
+
+        TreeNode t6 = new TreeNode(3);
+        TreeNode t7 = new TreeNode(4);
+        TreeNode t8 = new TreeNode(2, t6, t7);
+        TreeNode t9 = new TreeNode(4);
+        TreeNode t10 = new TreeNode(3);
+        TreeNode t11 = new TreeNode(2, t9, t10);
+        TreeNode t12 = new TreeNode(1, t8, t11);
+
+        TreeNode t13 = new TreeNode(2);
+        TreeNode t14 = new TreeNode(3);
+        TreeNode t15 = new TreeNode(1, t13, t14);
+
+        System.out.println(new SymmetricTree().isSymmetric(t5));
+    }
+
 }

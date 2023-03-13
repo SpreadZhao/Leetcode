@@ -23,7 +23,8 @@ public class Main {
 //        Test.singleElementInASortedArray();
 //        Test.containerWithMostWater();
 //        Test.sumClosest();
-        Test.sltoBst();
+//        Test.sltoBst();
+        Test.symmetricTree();
         long etime = System.currentTimeMillis();
 
 
