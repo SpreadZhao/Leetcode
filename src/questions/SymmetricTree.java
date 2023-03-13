@@ -6,6 +6,8 @@ import model.TreeNode;
  * Link: <a href="https://leetcode.com/problems/symmetric-tree/">Symmetric Tree</a>
  * <p>
  * Guess: After inversion, the tree is the same as the former one.
+ * <p>
+ * <a href="https://leetcode.com/problems/symmetric-tree/solutions/3290132/python-java-c-video-explanation/">Solution</a>
  */
 public class SymmetricTree {
     public boolean isSymmetric(TreeNode root) {
