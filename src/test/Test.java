@@ -178,4 +178,13 @@ public class Test {
         System.out.println(new SymmetricTree().isSymmetric(t5));
     }
 
+    public static void sumRootToLeafNumbers(){
+        TreeNode t1 = new TreeNode(5);
+        TreeNode t2 = new TreeNode(1);
+        TreeNode t3 = new TreeNode(9, t1, t2);
+        TreeNode t4 = new TreeNode(0);
+        TreeNode t5 = new TreeNode(4, t3, t4);
+        System.out.println(new SumRootToLeafNumbers().sumNumbers(t5));
+    }
+
 }

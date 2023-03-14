@@ -24,7 +24,8 @@ public class Main {
 //        Test.containerWithMostWater();
 //        Test.sumClosest();
 //        Test.sltoBst();
-        Test.symmetricTree();
+//        Test.symmetricTree();
+        Test.sumRootToLeafNumbers();
         long etime = System.currentTimeMillis();
 
 
