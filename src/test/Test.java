@@ -184,6 +184,9 @@ public class Test {
         TreeNode t3 = new TreeNode(9, t1, t2);
         TreeNode t4 = new TreeNode(0);
         TreeNode t5 = new TreeNode(4, t3, t4);
+
+        TreeNode t6 = new TreeNode(5);
+        TreeNode t7 = new TreeNode(1, null, t6);
         System.out.println(new SumRootToLeafNumbers().sumNumbers(t5));
     }
 
