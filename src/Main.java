@@ -25,7 +25,8 @@ public class Main {
 //        Test.sumClosest();
 //        Test.sltoBst();
 //        Test.symmetricTree();
-        Test.sumRootToLeafNumbers();
+//        Test.sumRootToLeafNumbers();
+        Test.trie();
         long etime = System.currentTimeMillis();
 
 

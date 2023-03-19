@@ -190,4 +190,14 @@ public class Test {
         System.out.println(new SumRootToLeafNumbers().sumNumbers(t5));
     }
 
+    public static void trie(){
+        Trie trie = new Trie();
+        trie.insert("spread");
+        trie.insert("spade");
+        System.out.println("haha: " + trie.search("haha"));
+        System.out.println("sprea: " + trie.search("sprea"));
+        System.out.println("spread: " + trie.search("spread"));
+        System.out.println("sprea start: " + trie.startsWith("sprea"));
+    }
+
 }
