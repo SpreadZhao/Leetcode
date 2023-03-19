@@ -200,4 +200,21 @@ public class Test {
         System.out.println("sprea start: " + trie.startsWith("sprea"));
     }
 
+    public static void wordDict(){
+        WordDictionary wd = new WordDictionary();
+//        wd.addWord("bad");
+//        wd.addWord("dad");
+//        wd.addWord("mad");
+        wd.addWord("at");
+        wd.addWord("and");
+        wd.addWord("an");
+        wd.addWord("add");
+        wd.search("a");
+        System.out.println(wd.search(".at"));
+        wd.addWord("bat");
+        System.out.println(wd.search(".at"));
+        System.out.println("bad: " + wd.search("bad"));
+        System.out.println("b.d: " + wd.search("b.d"));
+    }
+
 }

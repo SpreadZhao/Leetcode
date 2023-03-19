@@ -26,7 +26,8 @@ public class Main {
 //        Test.sltoBst();
 //        Test.symmetricTree();
 //        Test.sumRootToLeafNumbers();
-        Test.trie();
+//        Test.trie();
+        Test.wordDict();
         long etime = System.currentTimeMillis();
 
 
