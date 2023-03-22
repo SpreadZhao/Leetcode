@@ -1,4 +1,5 @@
 import test.Test;
+import test.TestExercise;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +29,9 @@ public class Main {
 //        Test.sumRootToLeafNumbers();
 //        Test.trie();
 //        Test.wordDict();
-        Test.canPlaceFlowers();
+//        Test.canPlaceFlowers();
+//        TestExercise.testGraph();
+        Test.mimimunScore();
         long etime = System.currentTimeMillis();
 
 
