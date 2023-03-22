@@ -217,4 +217,12 @@ public class Test {
         System.out.println("b.d: " + wd.search("b.d"));
     }
 
+    public static void canPlaceFlowers(){
+        int[] flowerbed = {1, 0, 0, 0, 1};
+        int[] flowerbed2 = {0, 0, 1, 0, 1};
+        int[] flowerbed3 = {1};
+        int[] flowerbed4 = {0, 0, 0};
+        System.out.println(new CanPlaceFlowers().canPlaceFlowers(flowerbed4, 2));
+    }
+
 }

@@ -27,7 +27,8 @@ public class Main {
 //        Test.symmetricTree();
 //        Test.sumRootToLeafNumbers();
 //        Test.trie();
-        Test.wordDict();
+//        Test.wordDict();
+        Test.canPlaceFlowers();
         long etime = System.currentTimeMillis();
 
 
