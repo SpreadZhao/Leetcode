@@ -31,7 +31,8 @@ public class Main {
 //        Test.wordDict();
 //        Test.canPlaceFlowers();
 //        TestExercise.testGraph();
-        Test.mimimunScore();
+//        Test.mimimunScore();
+        Test.connectNetwork();
         long etime = System.currentTimeMillis();
 
 

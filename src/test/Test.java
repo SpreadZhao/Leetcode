@@ -267,4 +267,14 @@ public class Test {
         System.out.println(new MinimumScoreOfAPathBTC().minScore(n2, roads2));
     }
 
+    public static void connectNetwork(){
+        int n = 4;
+        int[][] connections = {
+                {0, 1},
+                {0, 2},
+                {1, 2}
+        };
+        System.out.println(new ConnectNetwork().makeConnected(n, connections));
+    }
+
 }
