@@ -1,16 +1,19 @@
-import test.Test.connectNetwork
-import test.Test.sumClosest
-import test.Test.unreachableNodes
+import test.Test.longestCommonPrefix
+import test.Test.longestSubstring
 
 object Main {
     @JvmStatic
     fun main(args: Array<String>) {
-//        Test.romanInteger("MCMXCIV");
-//        Test.longestCommonPrefix();
+
         val stime = System.currentTimeMillis()
+
+
+//        Test.romanInteger("MCMXCIV");
+//        longestCommonPrefix();
+
         //        Test.sum();
 //        Test.addTwoNumbers();
-//        Test.longestSubstring();
+        longestSubstring();
 //        Test.longestPalindromicSubstring();
 //        Test.zigzagConversion();
 //        Test.shuffleTheArray();
@@ -25,7 +28,7 @@ object Main {
 //        Test.searchInsertPosition();
 //        Test.singleElementInASortedArray();
 //        Test.containerWithMostWater();
-//        sumClosest();
+//        sumClosest()
 //        Test.sltoBst();
 //        Test.symmetricTree();
 //        Test.sumRootToLeafNumbers();
@@ -35,7 +38,27 @@ object Main {
 //        TestExercise.testGraph();
 //        Test.mimimunScore();
 //        connectNetwork()
-        unreachableNodes()
+//        unreachableNodes()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         val etime = System.currentTimeMillis()
         println("time: " + (etime - stime))
     }
