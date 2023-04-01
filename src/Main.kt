@@ -1,5 +1,7 @@
 import test.Test.longestCommonPrefix
 import test.Test.longestSubstring
+import test.Test.reverseInteger
+import test.Test.singleElementInASortedArray
 
 object Main {
     @JvmStatic
@@ -13,11 +15,11 @@ object Main {
 
         //        Test.sum();
 //        Test.addTwoNumbers();
-        longestSubstring();
+//        longestSubstring();
 //        Test.longestPalindromicSubstring();
 //        Test.zigzagConversion();
 //        Test.shuffleTheArray();
-//        Test.reverseInteger();
+//        reverseInteger()
 //        Test.stringToInteger();
 //        Test.palindromeNumber();
 //        Test.integerToRoman();
@@ -26,7 +28,7 @@ object Main {
 //        Test.maxDepthOfBianryTree();
 //        Test.regularExpressionMatching();
 //        Test.searchInsertPosition();
-//        Test.singleElementInASortedArray();
+        singleElementInASortedArray();
 //        Test.containerWithMostWater();
 //        sumClosest()
 //        Test.sltoBst();

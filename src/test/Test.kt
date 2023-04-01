@@ -66,8 +66,8 @@ object Test {
     }
 
     fun reverseInteger() {
-        val x = 1534236469
-        println(ReverseInteger().reverse(x))
+        val x = -123
+        println(ReverseInteger().reverse2(x))
     }
 
     fun stringToInteger() {
@@ -131,7 +131,7 @@ object Test {
     fun singleElementInASortedArray() {
         val nums = intArrayOf(1, 1, 2, 3, 3, 4, 4, 8, 8)
         val nums2 = intArrayOf(3, 3, 7, 7, 10, 11, 11)
-        println(SingleElementInASortedArray().singleNonDuplicate(nums2))
+        println(SingleElementInASortedArray().singleNonDuplicate2(nums2))
     }
 
     fun containerWithMostWater() {
