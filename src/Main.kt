@@ -2,6 +2,7 @@ import test.Test.longestCommonPrefix
 import test.Test.longestSubstring
 import test.Test.reverseInteger
 import test.Test.singleElementInASortedArray
+import test.Test.spellsAndPotions
 
 object Main {
     @JvmStatic
@@ -28,7 +29,7 @@ object Main {
 //        Test.maxDepthOfBianryTree();
 //        Test.regularExpressionMatching();
 //        Test.searchInsertPosition();
-        singleElementInASortedArray();
+//        singleElementInASortedArray()
 //        Test.containerWithMostWater();
 //        sumClosest()
 //        Test.sltoBst();
@@ -41,6 +42,7 @@ object Main {
 //        Test.mimimunScore();
 //        connectNetwork()
 //        unreachableNodes()
+        spellsAndPotions()
 
 
 

@@ -252,4 +252,14 @@ object Test {
         )
         println(UnreachableNodes().countPairs(n, edges))
     }
+
+    fun spellsAndPotions(){
+        val spells = intArrayOf(5, 1, 3)
+        val potions = intArrayOf(1, 2, 3, 4, 5)
+        val success = 7L
+        val spells2 = intArrayOf(3, 1, 2)
+        val potions2 = intArrayOf(8, 5, 8)
+        val success2 = 16L
+        println(SpellsAndPotions().successfulPairs2(spells2, potions2, success2))
+    }
 }
