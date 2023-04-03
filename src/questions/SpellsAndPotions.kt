@@ -30,21 +30,23 @@ class SpellsAndPotions {
                 if(product >= success) high = mid - 1
                 else low = mid + 1
             }
-            if(low == potions.lastIndex){
-                if(potions[low].toLong() * spell >= success) pairs[i]++
-            }else if(low == 0){
-                if(potions[low].toLong() * spell >= success) pairs[i] += potions.size
-                else if(potions[low + 1].toLong() * spell >= success) pairs[i] += potions.size - 1
-            }else{
-                val product = potions[low].toLong() * spell
-                if(product < success){
-                    val product_n = potions[low + 1].toLong() * spell
-                    if(product_n >= success) pairs[i] += potions.size - low - 1
-                }else{
-                    val product_p = potions[low - 1].toLong() * spell
-                    if(product_p < success) pairs[i] += potions.size - low
-                }
-            }
+//            if(low == potions.lastIndex){
+//                if(potions[low].toLong() * spell >= success) pairs[i]++
+//            }else if(low == 0){
+//                if(potions[low].toLong() * spell >= success) pairs[i] += potions.size
+//                else if(potions[low + 1].toLong() * spell >= success) pairs[i] += potions.size - 1
+//            }else{
+//                val product = potions[low].toLong() * spell
+//                if(product < success){
+//                    val product_n = potions[low + 1].toLong() * spell
+//                    if(product_n >= success) pairs[i] += potions.size - low - 1
+//                }else{
+//                    val product_p = potions[low - 1].toLong() * spell
+//                    if(product_p < success) pairs[i] += potions.size - low
+//                }
+//            }
+            if(potions[low].toLong() * spell >= success) pairs[i] += potions.size - low
+            else pairs[i] += potions.size - low - 1
         }
         return pairs
     }
