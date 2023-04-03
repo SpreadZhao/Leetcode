@@ -262,4 +262,10 @@ object Test {
         val success2 = 16L
         println(SpellsAndPotions().successfulPairs2(spells2, potions2, success2))
     }
+
+    fun boatsToSavePeople(){
+        val people = intArrayOf(5, 1, 4, 2)
+        val limit = 6
+        println(BoatsToSavePeople().numRescueBoats(people, limit))
+    }
 }

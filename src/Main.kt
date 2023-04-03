@@ -1,3 +1,4 @@
+import test.Test.boatsToSavePeople
 import test.Test.longestCommonPrefix
 import test.Test.longestSubstring
 import test.Test.reverseInteger
@@ -42,8 +43,8 @@ object Main {
 //        Test.mimimunScore();
 //        connectNetwork()
 //        unreachableNodes()
-        spellsAndPotions()
-
+//        spellsAndPotions()
+        boatsToSavePeople()
 
 
 
