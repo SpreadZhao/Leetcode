@@ -268,4 +268,10 @@ object Test {
         val limit = 6
         println(BoatsToSavePeople().numRescueBoats(people, limit))
     }
+
+    fun medianOfTwoSortedArrays(){
+        val nums1 = intArrayOf(1, 2)
+        val nums2 = intArrayOf(3, 4)
+        println(MedianOfTwoSortedArrays().findMedianSortedArrays(nums1, nums2))
+    }
 }

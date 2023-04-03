@@ -1,6 +1,7 @@
 import test.Test.boatsToSavePeople
 import test.Test.longestCommonPrefix
 import test.Test.longestSubstring
+import test.Test.medianOfTwoSortedArrays
 import test.Test.reverseInteger
 import test.Test.singleElementInASortedArray
 import test.Test.spellsAndPotions
@@ -44,7 +45,8 @@ object Main {
 //        connectNetwork()
 //        unreachableNodes()
 //        spellsAndPotions()
-        boatsToSavePeople()
+//        boatsToSavePeople()
+        medianOfTwoSortedArrays()
 
 
 
