@@ -16,22 +16,32 @@ class OptimalPartitionOfString {
 //        }
 //    }
 
+    // TLE ...
     fun partitionString(s: String): Int {
         val sub = ArrayList<HashMap<Char, Int>>()
+        sub.add(HashMap())
         for(ch in s){
-            var needNew = true
-            for(per_map in sub){
-                if(!per_map.containsKey(ch)){
-                    needNew = false
-                    per_map[ch] = 0
-                }
+            if(!sub.last().containsKey(ch)){
+               sub.last()[ch] = 0
+               continue
             }
-            if(needNew){
-                sub.add(HashMap())
-                sub.last()[ch] = 0
-            }
+            sub.add(HashMap())
+            sub.last()[ch] = 0
         }
         return sub.size
+    }
+
+    fun partitionString4(s: String): Int {
+        val subs = HashSet<Char>()
+        var count = 1
+        for(ch in s){
+            if(subs.contains(ch)){
+                count++
+                subs.clear()
+            }
+            subs.add(ch)
+        }
+        return count
     }
 
     fun partitionString2(s: String): Int {
@@ -61,6 +71,20 @@ class OptimalPartitionOfString {
         return count
     }
 
+    fun partitionString5(s: String): Int {
+        var count = 1
+        val merge = BooleanArray(26)
+        merge.fill(false)
+        for(ch in s){
+            val index = ch - 'a'
+            if(merge[index]){
+                count++
+                merge.fill(false)
+            }
+            merge[index] = true
+        }
+        return count
+    }
     private fun listContain(sub: List<Map<Char, Int>>, ch: Char): Int {
         for(i in sub.indices){
             if(sub[i].containsKey(ch)) return i
