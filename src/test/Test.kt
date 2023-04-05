@@ -274,4 +274,9 @@ object Test {
         val nums2 = intArrayOf(3, 4)
         println(MedianOfTwoSortedArrays().findMedianSortedArrays(nums1, nums2))
     }
+
+    fun minimizeMaxmimumOfArray(){
+        val nums = intArrayOf(13, 13, 20, 0, 8, 9, 9)
+        println(MinimizeMaximumOfArray().minimizeArrayValue(nums))
+    }
 }

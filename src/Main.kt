@@ -2,6 +2,7 @@ import test.Test.boatsToSavePeople
 import test.Test.longestCommonPrefix
 import test.Test.longestSubstring
 import test.Test.medianOfTwoSortedArrays
+import test.Test.minimizeMaxmimumOfArray
 import test.Test.reverseInteger
 import test.Test.singleElementInASortedArray
 import test.Test.spellsAndPotions
@@ -46,7 +47,8 @@ object Main {
 //        unreachableNodes()
 //        spellsAndPotions()
 //        boatsToSavePeople()
-        medianOfTwoSortedArrays()
+//        medianOfTwoSortedArrays()
+        minimizeMaxmimumOfArray()
 
 
 
