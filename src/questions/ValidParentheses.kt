@@ -29,7 +29,7 @@ class ValidParentheses {
 
     fun isValid2(s: String): Boolean {
         var stack = 0L
-        if(s.length > 100) return true
+//        if(s.length > 100) return true
         for(ch in s){
             when(ch){
                 '(' -> stack = (stack shl 2) + 1

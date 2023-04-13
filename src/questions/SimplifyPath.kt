@@ -3,6 +3,9 @@ package questions
 import java.util.Stack
 import java.util.StringTokenizer
 
+/**
+ * Link: [Simplify Path](https://leetcode.com/problems/simplify-path/)
+ */
 class SimplifyPath {
     fun simplifyPath(path: String): String {
         val tokens = StringTokenizer(path, "/")

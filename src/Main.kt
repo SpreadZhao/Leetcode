@@ -54,7 +54,8 @@ object Main {
 //        medianOfTwoSortedArrays()
 //        minimizeMaxmimumOfArray()
 //        validParentheses()
-        simplyfyPath()
+//        simplyfyPath()
+
 
 
 
@@ -81,4 +82,6 @@ object Main {
         val etime = System.currentTimeMillis()
         println("time: " + (etime - stime))
     }
+
+
 }

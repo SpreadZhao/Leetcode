@@ -1,5 +1,8 @@
 package questions
 
+/**
+ * Link: [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/)
+ */
 class LongestCommonPrefix {
     fun longestCommonPrefix(strs: Array<String>): String {
         val builder = StringBuilder()
