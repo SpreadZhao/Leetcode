@@ -1,5 +1,7 @@
 package test
 
+import exercise.MyThread
+import exercise.MyThreadSyn
 import model.ListNode
 import model.TreeNode
 import questions.*
@@ -278,5 +280,28 @@ object Test {
     fun minimizeMaxmimumOfArray(){
         val nums = intArrayOf(13, 13, 20, 0, 8, 9, 9)
         println(MinimizeMaximumOfArray().minimizeArrayValue(nums))
+    }
+
+    fun testMyThread(){
+        val t1 = MyThread(1)
+        val t2 = MyThread(2)
+        val t3 = MyThread(3)
+        t1.start()
+        t2.start()
+        t3.start()
+    }
+
+    fun testMyThreadSyn(){
+
+    }
+
+    fun validParentheses(){
+        val s = "({{{{}}}))"
+        println(ValidParentheses().isValid2(s))
+    }
+
+    fun simplyfyPath(){
+        val s = "/../lGyI/"
+        println(SimplifyPath().simplifyPath(s))
     }
 }

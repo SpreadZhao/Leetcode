@@ -1,11 +1,15 @@
+import exercise.MyThread
 import test.Test.boatsToSavePeople
 import test.Test.longestCommonPrefix
 import test.Test.longestSubstring
 import test.Test.medianOfTwoSortedArrays
 import test.Test.minimizeMaxmimumOfArray
 import test.Test.reverseInteger
+import test.Test.simplyfyPath
 import test.Test.singleElementInASortedArray
 import test.Test.spellsAndPotions
+import test.Test.testMyThread
+import test.Test.validParentheses
 
 object Main {
     @JvmStatic
@@ -48,7 +52,13 @@ object Main {
 //        spellsAndPotions()
 //        boatsToSavePeople()
 //        medianOfTwoSortedArrays()
-        minimizeMaxmimumOfArray()
+//        minimizeMaxmimumOfArray()
+//        validParentheses()
+        simplyfyPath()
+
+
+
+//        while (true);
 
 
 
