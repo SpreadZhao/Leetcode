@@ -307,6 +307,7 @@ object Test {
 
     fun longestPalindromicSubsequence() {
         val s = "bbbab"
-        println(LongestPalindromicSubsequence().longestPalindromeSubseq(s))
+        val s2 = "cbbd"
+        println(LongestPalindromicSubsequence().longestPalindromeSubseq2(s2))
     }
 }
