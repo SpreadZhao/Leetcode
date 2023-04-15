@@ -1,6 +1,7 @@
 import exercise.MyThread
 import test.Test.boatsToSavePeople
 import test.Test.longestCommonPrefix
+import test.Test.longestPalindromicSubsequence
 import test.Test.longestSubstring
 import test.Test.medianOfTwoSortedArrays
 import test.Test.minimizeMaxmimumOfArray
@@ -10,6 +11,11 @@ import test.Test.singleElementInASortedArray
 import test.Test.spellsAndPotions
 import test.Test.testMyThread
 import test.Test.validParentheses
+import test.TestExercise
+import test.TestExercise.longestCommonSubsequence
+import test.TestExercise.longestCommonSubstring
+import test.TestExercise.matrixChainProduct
+import test.TestExercise.maxSum
 
 object Main {
     @JvmStatic
@@ -55,6 +61,11 @@ object Main {
 //        minimizeMaxmimumOfArray()
 //        validParentheses()
 //        simplyfyPath()
+//        matrixChainProduct()
+//        longestCommonSubsequence()
+//        longestCommonSubstring()
+//        maxSum()
+        longestPalindromicSubsequence()
 
 
 

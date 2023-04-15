@@ -304,4 +304,9 @@ object Test {
         val s = "/../lGyI/"
         println(SimplifyPath().simplifyPath(s))
     }
+
+    fun longestPalindromicSubsequence() {
+        val s = "bbbab"
+        println(LongestPalindromicSubsequence().longestPalindromeSubseq(s))
+    }
 }
