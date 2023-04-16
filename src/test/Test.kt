@@ -310,4 +310,14 @@ object Test {
         val s2 = "cbbd"
         println(LongestPalindromicSubsequence().longestPalindromeSubseq2(s2))
     }
+
+    fun formString() {
+        val words = arrayOf(
+                "acca",
+                "bbbb",
+                "caca"
+        )
+        val target = "aba"
+        println(FormString().numWays(words, target))
+    }
 }
