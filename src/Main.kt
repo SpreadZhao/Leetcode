@@ -1,6 +1,7 @@
 import exercise.MyThread
 import test.Test.boatsToSavePeople
 import test.Test.formString
+import test.Test.lcoaPN
 import test.Test.longestCommonPrefix
 import test.Test.longestPalindromicSubsequence
 import test.Test.longestSubstring
@@ -67,7 +68,8 @@ object Main {
 //        longestCommonSubstring()
 //        maxSum()
 //        longestPalindromicSubsequence()
-        formString()
+//        formString()
+        lcoaPN()
 
 
 

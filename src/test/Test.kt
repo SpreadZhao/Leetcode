@@ -320,4 +320,9 @@ object Test {
         val target = "aba"
         println(FormString().numWays(words, target))
     }
+
+    fun lcoaPN() {
+        val digits = "232"
+        println(LetterCombinationsOfAPhoneNumber().letterCombinations2(digits))
+    }
 }
