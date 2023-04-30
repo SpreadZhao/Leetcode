@@ -30,6 +30,23 @@ object TestExercise {
     fun maxSum() {
         val arr = intArrayOf(-2, 11, -4, 13, -5, -2)
         val arr2 = intArrayOf(1)
-        println(MaxSum().maxSum(arr2))
+        println(MaxSum().maxSum(arr))
+    }
+
+    fun fractionalKS() {
+        val arr = arrayOf(
+            KnapSack.ItemValue(60, 10),
+            KnapSack.ItemValue(100, 20),
+            KnapSack.ItemValue(120, 30)
+        )
+        val capacity = 50
+        println(KnapSack().getMaxValue(arr, capacity))
+    }
+
+    fun zeroOneKS() {
+        val profit = intArrayOf(60, 1000, 120)
+        val weight = intArrayOf(30, 30, 30)
+        val w = 50
+        println(KnapSack().zeroOneKnap3(w, weight, profit, profit.size))
     }
 }

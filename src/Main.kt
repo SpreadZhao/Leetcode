@@ -14,10 +14,12 @@ import test.Test.spellsAndPotions
 import test.Test.testMyThread
 import test.Test.validParentheses
 import test.TestExercise
+import test.TestExercise.fractionalKS
 import test.TestExercise.longestCommonSubsequence
 import test.TestExercise.longestCommonSubstring
 import test.TestExercise.matrixChainProduct
 import test.TestExercise.maxSum
+import test.TestExercise.zeroOneKS
 
 object Main {
     @JvmStatic
@@ -69,7 +71,9 @@ object Main {
 //        maxSum()
 //        longestPalindromicSubsequence()
 //        formString()
-        lcoaPN()
+//        lcoaPN()
+//        fractionalKS()
+        zeroOneKS()
 
 
 
