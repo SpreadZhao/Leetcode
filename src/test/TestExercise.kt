@@ -49,4 +49,21 @@ object TestExercise {
         val w = 50
         println(KnapSack().zeroOneKnap3(w, weight, profit, profit.size))
     }
+
+    fun schedule() {
+        val time = intArrayOf(15, 8, 3, 10)
+        println(Schedule().minAverageCompletion(time))
+    }
+
+    fun shortest() {
+        val I = Int.MAX_VALUE
+        val edges = arrayOf(
+                intArrayOf(0, -1, 4, I, I),
+                intArrayOf(I, 0, 3, 2, 2),
+                intArrayOf(I, I, 0, I, I),
+                intArrayOf(I, 1, 5, 0, I),
+                intArrayOf(I, I, I, -3, 0)
+        )
+        println(ShortestPath().shortestPath(edges, edges.size, 8))
+    }
 }

@@ -19,6 +19,8 @@ import test.TestExercise.longestCommonSubsequence
 import test.TestExercise.longestCommonSubstring
 import test.TestExercise.matrixChainProduct
 import test.TestExercise.maxSum
+import test.TestExercise.schedule
+import test.TestExercise.shortest
 import test.TestExercise.zeroOneKS
 
 object Main {
@@ -73,8 +75,9 @@ object Main {
 //        formString()
 //        lcoaPN()
 //        fractionalKS()
-        zeroOneKS()
-
+//        zeroOneKS()
+//        schedule()
+        shortest()
 
 
 
