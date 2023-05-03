@@ -1,5 +1,6 @@
 import exercise.MyThread
 import test.Test.boatsToSavePeople
+import test.Test.differenceOfTwoArrays
 import test.Test.formString
 import test.Test.lcoaPN
 import test.Test.longestCommonPrefix
@@ -77,7 +78,8 @@ object Main {
 //        fractionalKS()
 //        zeroOneKS()
 //        schedule()
-        shortest()
+//        shortest()
+        differenceOfTwoArrays()
 
 
 

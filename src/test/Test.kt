@@ -1,11 +1,9 @@
 package test
 
 import exercise.MyThread
-import exercise.MyThreadSyn
 import model.ListNode
 import model.TreeNode
 import questions.*
-import java.math.BigInteger
 import java.util.*
 
 object Test {
@@ -324,5 +322,11 @@ object Test {
     fun lcoaPN() {
         val digits = "232"
         println(LetterCombinationsOfAPhoneNumber().letterCombinations2(digits))
+    }
+
+    fun differenceOfTwoArrays() {
+        val nums1 = intArrayOf(1, 2, 3)
+        val nums2 = intArrayOf(2, 4, 6)
+        println(DifferenceOfTwoArrays().findDifference(nums1, nums2))
     }
 }
