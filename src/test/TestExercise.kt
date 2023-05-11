@@ -44,9 +44,9 @@ object TestExercise {
     }
 
     fun zeroOneKS() {
-        val profit = intArrayOf(60, 1000, 120)
-        val weight = intArrayOf(30, 30, 30)
-        val w = 50
+        val profit = intArrayOf(20, 30, 65, 40, 60)
+        val weight = intArrayOf(10, 20, 30, 40, 50)
+        val w = 100
         println(KnapSack().zeroOneKnap3(w, weight, profit, profit.size))
     }
 
@@ -64,7 +64,25 @@ object TestExercise {
                 intArrayOf(I, 1, 5, 0, I),
                 intArrayOf(I, I, I, -3, 0)
         )
+        println("before:")
+        edges.forEach {
+            it.forEach { num ->
+                if (num != I) print("$num\t")
+                else print("I\t")
+            }
+            println()
+        }
+        println("bellman-ford:")
         ShortestPath().shortestPath(edges).forEach { num -> print("$num ") }
         println()
+        ShortestPath().floyd(link = edges)
+        println("floyd:")
+        edges.forEach {
+            it.forEach { num ->
+                if (num != I) print("$num\t")
+                else print("I\t")
+            }
+            println()
+        }
     }
 }

@@ -2,6 +2,21 @@ package exercise
 
 class ShortestPath {
 
+    val threshold = 10e7
+
+    fun floyd(link: Array<IntArray>) {
+        for (k in link.indices) {
+            for (i in link.indices) {
+                for (j in link.indices) {
+                    if (link[i][k] == Int.MAX_VALUE || link[k][j] == Int.MAX_VALUE) continue
+                    if (link[i][j] > link[i][k] + link[k][j]) {
+                        link[i][j] = link[i][k] + link[k][j]
+                    }
+                }
+            }
+        }
+    }
+
     inner class Edge(val start: Int, val end: Int, val weight: Int)
 
     fun shortestPath(link: Array<IntArray>): IntArray {

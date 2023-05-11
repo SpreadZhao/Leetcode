@@ -78,8 +78,8 @@ object Main {
 //        fractionalKS()
 //        zeroOneKS()
 //        schedule()
-//        shortest()
-        differenceOfTwoArrays()
+        shortest()
+//        differenceOfTwoArrays()
 
 
 
