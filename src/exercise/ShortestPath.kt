@@ -19,27 +19,32 @@ class ShortestPath {
 
     inner class Edge(val start: Int, val end: Int, val weight: Int)
 
-    fun shortestPath(link: Array<IntArray>): IntArray {
+    fun shortestPath(link: Array<IntArray>) {
         val edges = generateEdges(link)
         val res = IntArray(link.size) { Int.MAX_VALUE }
-        res[0] = 0
+        val predecessor = IntArray(link.size) { -1 }
+        res[0] = 0 // z is the source
         for (i in 1 until link.size) {
             var changed = false
             for (j in edges.indices) {
                 if (res[edges[j].start] == Int.MAX_VALUE) continue
                 if (res[edges[j].end] > res[edges[j].start] + edges[j].weight) {
                     res[edges[j].end] = res[edges[j].start] + edges[j].weight
+                    predecessor[edges[j].end] = edges[j].start
                     changed = true
                 }
             }
-            if (!changed) return res
+            print("res: "); res.forEach { print("${ if (it == Int.MAX_VALUE) "I" else it } ") }
+            println()
+            print("predecessor: "); predecessor.forEach { print("$it ") }
+            println()
+            if (!changed) return
         }
         for (i in edges.indices) {
             if (res[edges[i].end] > res[edges[i].start] + edges[i].weight && res[edges[i].start] != Int.MAX_VALUE) {
                 println("Negative ring")
             }
         }
-        return res
     }
 
     private fun generateEdges(link: Array<IntArray>): ArrayList<Edge> {

@@ -17,8 +17,26 @@ class MatrixChainProduct {
         val i = 1
         val n = p.size
         val j = n - 1
-        val dp = Array(n){IntArray(n){-1}}
+        val dp = Array(n) { IntArray(n) { -1 } }
         return dpCore(p, i, j, dp)
+    }
+
+    fun minCount3(p: IntArray): Int {
+        val n = p.size
+        val dp = Array(n) { IntArray(n) { -1 } }
+        for (i in 1 until n) dp[i][i] = 0
+        for (l in 2 until n) {
+            for (i in 1 until n - l + 1) {
+                val j = i + l - 1
+                // if (j == n) continue
+                dp[i][j] = Int.MAX_VALUE
+                for (k in i until j) {
+                    val q = dp[i][k] + dp[k + 1][j] + p[i - 1] * p[k] * p[j]
+                    if (q < dp[i][j]) dp[i][j] = q
+                }
+            }
+        }
+        return dp[1][n - 1]
     }
 
     private fun dpCore(p: IntArray, i: Int, j: Int, dp: Array<IntArray>): Int {

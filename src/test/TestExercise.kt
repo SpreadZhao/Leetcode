@@ -12,12 +12,15 @@ object TestExercise {
 
     fun matrixChainProduct() {
         val arr = intArrayOf(40, 20, 30, 10, 30)
-        println(MatrixChainProduct().minCount(arr, 1, arr.size - 1))
+        val arr2 = intArrayOf(5, 10, 3, 12, 5, 50, 6)
+        println(MatrixChainProduct().minCount(arr2, 1, arr2.size - 1))
+        println(MatrixChainProduct().minCount2(arr2))
+        println(MatrixChainProduct().minCount3(arr2))
     }
 
     fun longestCommonSubsequence() {
-        val s1 = "AGGTAB"
-        val s2 = "GXTXAYB"
+        val s1 = "10010101"
+        val s2 = "010110110"
         println(LongestCommonSubsequence().longestCommonSubsequence4(s1, s2))
     }
 
@@ -58,14 +61,21 @@ object TestExercise {
     fun shortest() {
         val I = Int.MAX_VALUE
         val edges = arrayOf(
-                intArrayOf(0, -1, 3, I, I),
-                intArrayOf(I, 0, 3, 2, 2),
-                intArrayOf(I, I, 0, I, I),
-                intArrayOf(I, 1, 5, 0, I),
-                intArrayOf(I, I, I, -3, 0)
+            intArrayOf(0, -1, 3, I, I),
+            intArrayOf(I, 0, 3, 2, 2),
+            intArrayOf(I, I, 0, I, I),
+            intArrayOf(I, 1, 5, 0, I),
+            intArrayOf(I, I, I, -3, 0)
+        )
+        val edges2 = arrayOf(
+            intArrayOf(0, 6, I, 4, I),
+            intArrayOf(I, 0, 5, 8, -4),
+            intArrayOf(I, -2, 0, I, I),
+            intArrayOf(I, I, -3, 0, 9),
+            intArrayOf(2, I, 7, I, 0)
         )
         println("before:")
-        edges.forEach {
+        edges2.forEach {
             it.forEach { num ->
                 if (num != I) print("$num\t")
                 else print("I\t")
@@ -73,16 +83,16 @@ object TestExercise {
             println()
         }
         println("bellman-ford:")
-        ShortestPath().shortestPath(edges).forEach { num -> print("$num ") }
-        println()
-        ShortestPath().floyd(link = edges)
-        println("floyd:")
-        edges.forEach {
-            it.forEach { num ->
-                if (num != I) print("$num\t")
-                else print("I\t")
-            }
-            println()
-        }
+        ShortestPath().shortestPath(edges2)
+//        println()
+//        ShortestPath().floyd(link = edges2)
+//        println("floyd:")
+//        edges2.forEach {
+//            it.forEach { num ->
+//                if (num != I) print("$num\t")
+//                else print("I\t")
+//            }
+//            println()
+//        }
     }
 }
