@@ -20,8 +20,10 @@ import test.TestExercise.longestCommonSubsequence
 import test.TestExercise.longestCommonSubstring
 import test.TestExercise.matrixChainProduct
 import test.TestExercise.maxSum
+import test.TestExercise.queen8
 import test.TestExercise.schedule
 import test.TestExercise.shortest
+import test.TestExercise.shortest2
 import test.TestExercise.zeroOneKS
 
 object Main {
@@ -78,8 +80,10 @@ object Main {
 //        fractionalKS()
 //        zeroOneKS()
 //        schedule()
-        shortest()
+//        shortest()
 //        differenceOfTwoArrays()
+//        shortest2()
+        queen8()
 
 
 

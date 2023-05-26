@@ -95,4 +95,31 @@ object TestExercise {
 //            println()
 //        }
     }
+
+    fun shortest2() {
+        val I = Int.MAX_VALUE
+        val edges = arrayOf(
+            intArrayOf(0, 3, 8, I, -4),
+            intArrayOf(I, 0, I, 1, 7),
+            intArrayOf(I, 4, 0, I, I),
+            intArrayOf(2, I, -5, 0, I),
+            intArrayOf(I, I, I, 6, 0)
+        )
+        val edges2 = arrayOf(
+            intArrayOf(0, I, I, I, -1, I),
+            intArrayOf(1, 0, I, 2, I, I),
+            intArrayOf(I, 2, 0, I, I, -8),
+            intArrayOf(-4, I, I, 0, 3, I),
+            intArrayOf(I, 7, I, I, 0, I),
+            intArrayOf(I, 5, 10, I, I, 0)
+        )
+//        ShortestPath().fasterAllPairsShortest(edges2)
+//        println("floyd:")
+        ShortestPath().floyd(edges2)
+
+    }
+
+    fun queen8() {
+        println(Queen8().run())
+    }
 }
