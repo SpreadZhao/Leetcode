@@ -92,4 +92,36 @@ class KnapSack {
         }
         return dp[n][capacity]
     }
+
+    private var res = Int.MIN_VALUE
+    fun zeroOneKnap4(capacity: Int, wt: IntArray, pft: IntArray, n: Int): Int {
+        val isChosen = BooleanArray(n)
+        choose(capacity, wt, pft, 0, n, isChosen)
+        return res
+    }
+
+    private fun choose(capacity: Int, wt: IntArray, pft: IntArray, curr: Int, n: Int, isChosen: BooleanArray) {
+        if (curr >= n) {
+            checkMax(capacity, wt, pft, n, isChosen)
+        } else {
+            isChosen[curr] = false
+            choose(capacity, wt, pft, curr + 1, n, isChosen)
+            isChosen[curr] = true
+            choose(capacity, wt, pft, curr + 1, n, isChosen)
+        }
+    }
+    private fun checkMax(capacity: Int, wt: IntArray, pft: IntArray, n: Int, isChosen: BooleanArray) {
+        var weight = 0; var profit = 0
+        for (i in isChosen.indices) {
+            if (isChosen[i]) {
+                weight += wt[i]
+                profit += pft[i]
+            }
+        }
+        if (weight <= capacity) {
+            if (profit > res) {
+                res = profit
+            }
+        }
+    }
 }

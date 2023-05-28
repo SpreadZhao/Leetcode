@@ -50,7 +50,7 @@ object TestExercise {
         val profit = intArrayOf(20, 30, 65, 40, 60)
         val weight = intArrayOf(10, 20, 30, 40, 50)
         val w = 100
-        println(KnapSack().zeroOneKnap3(w, weight, profit, profit.size))
+        println(KnapSack().zeroOneKnap4(w, weight, profit, profit.size))
     }
 
     fun schedule() {
