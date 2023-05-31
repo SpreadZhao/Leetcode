@@ -9,11 +9,15 @@ import test.Test.longestSubstring
 import test.Test.medianOfTwoSortedArrays
 import test.Test.minimizeMaxmimumOfArray
 import test.Test.reverseInteger
+import test.Test.searchInsertPosition
 import test.Test.simplyfyPath
 import test.Test.singleElementInASortedArray
 import test.Test.spellsAndPotions
 import test.Test.testMyThread
 import test.Test.validParentheses
+import test.TestAlgo
+import test.TestAlgo.insertionSort
+import test.TestAlgo.mergeSort
 import test.TestExercise
 import test.TestExercise.fractionalKS
 import test.TestExercise.longestCommonSubsequence
@@ -83,7 +87,9 @@ object Main {
 //        shortest()
 //        differenceOfTwoArrays()
 //        shortest2()
-        queen8()
+//        queen8()
+//        insertionSort()
+        mergeSort()
 
 
 
