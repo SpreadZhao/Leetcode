@@ -17,6 +17,7 @@ import test.Test.testMyThread
 import test.Test.validParentheses
 import test.TestAlgo
 import test.TestAlgo.insertionSort
+import test.TestAlgo.maximumSubarray
 import test.TestAlgo.mergeSort
 import test.TestExercise
 import test.TestExercise.fractionalKS
@@ -89,7 +90,8 @@ object Main {
 //        shortest2()
 //        queen8()
 //        insertionSort()
-        mergeSort()
+//        mergeSort()
+        maximumSubarray()
 
 
 

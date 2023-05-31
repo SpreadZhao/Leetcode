@@ -1,6 +1,7 @@
 package test
 
 import algo.InsertionSort
+import algo.MaximumSubarray
 import algo.MergeSort
 
 object TestAlgo {
@@ -14,6 +15,12 @@ object TestAlgo {
         MergeSort().sort(arr)
         arr.print()
     }
+
+    fun maximumSubarray() {
+        val arr = intArrayOf(-2, 11, -4, 13, -5, -2)
+        println(MaximumSubarray().maxSumDivideConquer(arr))
+    }
+
     private fun IntArray.print() {
         forEach {
             print("$it ")
