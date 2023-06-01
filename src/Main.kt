@@ -16,6 +16,7 @@ import test.Test.spellsAndPotions
 import test.Test.testMyThread
 import test.Test.validParentheses
 import test.TestAlgo
+import test.TestAlgo.countingSort
 import test.TestAlgo.insertionSort
 import test.TestAlgo.maxHeap
 import test.TestAlgo.maximumSubarray
@@ -95,7 +96,8 @@ object Main {
 //        mergeSort()
 //        maximumSubarray()
 //        maxHeap()
-        quickSort()
+//        quickSort()
+        countingSort()
 
 
 

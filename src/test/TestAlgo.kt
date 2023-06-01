@@ -59,6 +59,13 @@ object TestAlgo {
         arr2.print()
     }
 
+    fun countingSort() {
+        val arr = intArrayOf(2, 5, 7, 1, 8, 13, 14)
+        val arr2 = intArrayOf(4, 2, 3, 4, 3)
+        CountingSort().sort(arr2, 2 .. 4).print()
+        CountingSort().sort(arr, 1 .. 14).print()
+    }
+
     private fun IntArray.print() {
         forEach {
             print("$it ")
