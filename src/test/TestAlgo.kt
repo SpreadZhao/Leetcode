@@ -52,11 +52,11 @@ object TestAlgo {
 
     fun quickSort() {
         val arr = intArrayOf(3, 56, 4, 6, 8, 4, 35, 33, 22, 66, 77, 2, 1, 6, 9)
+        val arr2 = intArrayOf(100, 101, 2, 3, 5)
         QuickSort().sort(arr)
-        arr.forEach {
-            print("$it ")
-        }
-        println()
+        QuickSort().sort2(arr2)
+        arr.print()
+        arr2.print()
     }
 
     private fun IntArray.print() {
