@@ -17,8 +17,10 @@ import test.Test.testMyThread
 import test.Test.validParentheses
 import test.TestAlgo
 import test.TestAlgo.insertionSort
+import test.TestAlgo.maxHeap
 import test.TestAlgo.maximumSubarray
 import test.TestAlgo.mergeSort
+import test.TestAlgo.quickSort
 import test.TestExercise
 import test.TestExercise.fractionalKS
 import test.TestExercise.longestCommonSubsequence
@@ -91,7 +93,9 @@ object Main {
 //        queen8()
 //        insertionSort()
 //        mergeSort()
-        maximumSubarray()
+//        maximumSubarray()
+//        maxHeap()
+        quickSort()
 
 
 
