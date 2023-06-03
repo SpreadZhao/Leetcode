@@ -22,6 +22,7 @@ import test.TestAlgo.maxHeap
 import test.TestAlgo.maximumSubarray
 import test.TestAlgo.mergeSort
 import test.TestAlgo.quickSort
+import test.TestAlgo.rodCutting
 import test.TestExercise
 import test.TestExercise.fractionalKS
 import test.TestExercise.longestCommonSubsequence
@@ -97,7 +98,8 @@ object Main {
 //        maximumSubarray()
 //        maxHeap()
 //        quickSort()
-        countingSort()
+//        countingSort()
+        rodCutting()
 
 
 

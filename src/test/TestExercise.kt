@@ -13,9 +13,11 @@ object TestExercise {
     fun matrixChainProduct() {
         val arr = intArrayOf(40, 20, 30, 10, 30)
         val arr2 = intArrayOf(5, 10, 3, 12, 5, 50, 6)
+        val arr3 = intArrayOf(30, 35, 15, 5, 10, 20, 25)
         println(MatrixChainProduct().minCount(arr2, 1, arr2.size - 1))
         println(MatrixChainProduct().minCount2(arr2))
         println(MatrixChainProduct().minCount3(arr2))
+        println(MatrixChainProduct().minCount3(arr3))
     }
 
     fun longestCommonSubsequence() {

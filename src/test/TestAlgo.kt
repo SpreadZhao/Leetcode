@@ -66,6 +66,22 @@ object TestAlgo {
         CountingSort().sort(arr, 1 .. 14).print()
     }
 
+    fun rodCutting() {
+        val profit = intArrayOf(0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30)
+        val profit2 = intArrayOf(0, 1, 5, 8, 9, 10, 17, 17, 20, 24)
+        val profit3 = intArrayOf(0, 1, 5, 8, 9, 10, 17, 17, 20)
+        val profit4 = intArrayOf(0, 1, 5, 8, 9, 10, 17, 17)
+        println(RodCutting().bestVal(profit))
+        println(RodCutting().bestVal(profit2))
+        println(RodCutting().bestVal(profit3))
+        println(RodCutting().bestVal(profit4))
+        println("dp:")
+        println(RodCutting().bestVal2(profit))
+        println(RodCutting().bestVal2(profit2))
+        println(RodCutting().bestVal2(profit3))
+        println(RodCutting().bestVal2(profit4))
+    }
+
     private fun IntArray.print() {
         forEach {
             print("$it ")
