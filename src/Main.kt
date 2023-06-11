@@ -93,13 +93,13 @@ object Main {
 //        differenceOfTwoArrays()
 //        shortest2()
 //        queen8()
-//        insertionSort()
+        insertionSort()
 //        mergeSort()
 //        maximumSubarray()
 //        maxHeap()
 //        quickSort()
 //        countingSort()
-        rodCutting()
+//        rodCutting()
 
 
 

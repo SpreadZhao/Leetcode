@@ -5,8 +5,9 @@ import algo.*
 object TestAlgo {
     fun insertionSort() {
         val arr = intArrayOf(2, 3, 4, 5, 1)
-        InsertionSort().sort(arr)
-        arr.print()
+        val arr2 = intArrayOf(31, 41, 59, 26, 41, 58)
+        InsertionSort().sort(arr2)
+        arr2.print()
     }
     fun mergeSort() {
         val arr = intArrayOf(5, 8, 6, 9, 7, 100, 23, 315, 12, 77, 55, 33)
