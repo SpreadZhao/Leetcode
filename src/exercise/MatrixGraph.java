@@ -11,10 +11,11 @@ public class MatrixGraph {
 
     public int size;
     public boolean[] visited;
-    public MatrixGraph(int n, GraphType type, int[][] edges){
+
+    public MatrixGraph(int n, GraphType type, int[][] edges) {
         this.edges = new int[n][n];
         this.visited = new boolean[n];
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             System.arraycopy(edges[i], 0, this.edges[i], 0, n);
             visited[i] = false;
         }
@@ -22,8 +23,8 @@ public class MatrixGraph {
         this.type = type;
     }
 
-    public static void DFS(MatrixGraph G, int start){
-        for(int i = 0; i < G.size; i++) G.visited[i] = false;
+    public static void DFS(MatrixGraph G, int start) {
+        for (int i = 0; i < G.size; i++) G.visited[i] = false;
         DFS_Core(G, start);
 //        for(int i = 0; i < G.size; i++){
 //            if(!G.visited[i]){
@@ -32,18 +33,18 @@ public class MatrixGraph {
 //        }
     }
 
-    private static void DFS_Core(MatrixGraph G, int index){
-        System.out.println("[" + index +  "]");
+    private static void DFS_Core(MatrixGraph G, int index) {
+        System.out.println("[" + index + "]");
         G.visited[index] = true;
-        for(int i = firstNeighbor(G, index); i != NOT_FOUND; i = secondNeighbor(G, index, i)){
+        for (int i = firstNeighbor(G, index); i != NOT_FOUND; i = secondNeighbor(G, index, i)) {
             DFS_Core(G, i);
         }
     }
 
     // Find the first connected and UNVISITED neighbor node of index.
-    private static int firstNeighbor(MatrixGraph G, int index){
-        for(int j = 0; j < G.size; j++){
-            if(G.edgeExist(index, j) && !G.visited[j]) return j;
+    private static int firstNeighbor(MatrixGraph G, int index) {
+        for (int j = 0; j < G.size; j++) {
+            if (G.edgeExist(index, j) && !G.visited[j]) return j;
         }
         return NOT_FOUND;
     }
@@ -51,22 +52,22 @@ public class MatrixGraph {
     /**
      * Find the second connected and UNVISITED neighbor node of index,
      * except f_index
-     * @param G Graph to search
-     * @param index the target node
+     *
+     * @param G       Graph to search
+     * @param index   the target node
      * @param f_index the first neighbor of the target node
      * @return the index of the second neighbor
      */
-    private static int secondNeighbor(MatrixGraph G, int index, int f_index){
-        for(int j = f_index + 1; j < G.size; j++){
-            if(G.edgeExist(index, j) && !G.visited[j]) return j;
+    private static int secondNeighbor(MatrixGraph G, int index, int f_index) {
+        for (int j = f_index + 1; j < G.size; j++) {
+            if (G.edgeExist(index, j) && !G.visited[j]) return j;
         }
         return NOT_FOUND;
     }
 
-    private boolean edgeExist(int i, int j){
+    private boolean edgeExist(int i, int j) {
         return edges[i][j] != NOT_EXIST;
     }
-
 
 
 }

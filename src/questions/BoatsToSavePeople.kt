@@ -8,11 +8,11 @@ class BoatsToSavePeople {
         people.sortDescending()
         var i = 0
         var res = 0
-        while(i < people.size){
-            if(i == people.lastIndex) return res + 1
-            if(people[i] + people[i + 1] <= limit){
+        while (i < people.size) {
+            if (i == people.lastIndex) return res + 1
+            if (people[i] + people[i + 1] <= limit) {
                 i += 2
-            }else{
+            } else {
                 i++
             }
             res++
@@ -22,10 +22,12 @@ class BoatsToSavePeople {
 
     fun numRescueBoats2(people: IntArray, limit: Int): Int {
         people.sort()
-        var i = 0; var j = people.lastIndex; var res = 0
-        while(i <= j){
+        var i = 0;
+        var j = people.lastIndex;
+        var res = 0
+        while (i <= j) {
             res++
-            if(people[i] + people[j] <= limit) i++
+            if (people[i] + people[j] <= limit) i++
             j--
         }
         return res

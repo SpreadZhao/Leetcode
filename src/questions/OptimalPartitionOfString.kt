@@ -20,10 +20,10 @@ class OptimalPartitionOfString {
     fun partitionString(s: String): Int {
         val sub = ArrayList<HashMap<Char, Int>>()
         sub.add(HashMap())
-        for(ch in s){
-            if(!sub.last().containsKey(ch)){
-               sub.last()[ch] = 0
-               continue
+        for (ch in s) {
+            if (!sub.last().containsKey(ch)) {
+                sub.last()[ch] = 0
+                continue
             }
             sub.add(HashMap())
             sub.last()[ch] = 0
@@ -34,8 +34,8 @@ class OptimalPartitionOfString {
     fun partitionString4(s: String): Int {
         val subs = HashSet<Char>()
         var count = 1
-        for(ch in s){
-            if(subs.contains(ch)){
+        for (ch in s) {
+            if (subs.contains(ch)) {
                 count++
                 subs.clear()
             }
@@ -47,9 +47,10 @@ class OptimalPartitionOfString {
     fun partitionString2(s: String): Int {
         val lastSeen = IntArray(26)
         lastSeen.fill(-1)
-        var count = 1; var substringStart = 0
-        for(i in s.indices){
-            if(lastSeen[s[i] - 'a'] >= substringStart){
+        var count = 1;
+        var substringStart = 0
+        for (i in s.indices) {
+            if (lastSeen[s[i] - 'a'] >= substringStart) {
                 count++
                 substringStart = i
             }
@@ -59,10 +60,11 @@ class OptimalPartitionOfString {
     }
 
     fun partitionString3(s: String): Int {
-        var count = 1; var merge = 0
-        for(ch in s){
+        var count = 1;
+        var merge = 0
+        for (ch in s) {
             val index = ch - 'a'
-            if((merge and (1 shl index)) != 0){
+            if ((merge and (1 shl index)) != 0) {
                 count++
                 merge = 0
             }
@@ -75,9 +77,9 @@ class OptimalPartitionOfString {
         var count = 1
         val merge = BooleanArray(26)
         merge.fill(false)
-        for(ch in s){
+        for (ch in s) {
             val index = ch - 'a'
-            if(merge[index]){
+            if (merge[index]) {
                 count++
                 merge.fill(false)
             }
@@ -85,9 +87,10 @@ class OptimalPartitionOfString {
         }
         return count
     }
+
     private fun listContain(sub: List<Map<Char, Int>>, ch: Char): Int {
-        for(i in sub.indices){
-            if(sub[i].containsKey(ch)) return i
+        for (i in sub.indices) {
+            if (sub[i].containsKey(ch)) return i
         }
         return -1
     }

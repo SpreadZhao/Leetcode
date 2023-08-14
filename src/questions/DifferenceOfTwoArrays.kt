@@ -20,7 +20,8 @@ class DifferenceOfTwoArrays {
     }
 
     private fun exist(num: Int, arr: IntArray): Boolean {
-        var i = 0; var j = arr.lastIndex
+        var i = 0;
+        var j = arr.lastIndex
         while (i < j) {
             val mid = (i + j) / 2
             if (arr[mid] == num) return true

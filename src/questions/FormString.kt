@@ -10,15 +10,15 @@ class FormString {
         val MOD = 1000000000L + 7
         val m = target.length
         val k = words[0].length
-        val cnt = Array(ALPHABET) { IntArray(k) {0} }
+        val cnt = Array(ALPHABET) { IntArray(k) { 0 } }
         for (j in 0 until k) {
             for (str in words) {
                 cnt[str[j] - 'a'][j]++
             }
         }
-        val dp = Array(m + 1) { LongArray(k + 1) {0} }
+        val dp = Array(m + 1) { LongArray(k + 1) { 0 } }
         dp[0][0] = 1
-        for (i in 0 .. m) {
+        for (i in 0..m) {
             for (j in 0 until k) {
                 if (i < m) {
                     dp[i + 1][j + 1] += cnt[target[i] - 'a'][j] * dp[i][j]

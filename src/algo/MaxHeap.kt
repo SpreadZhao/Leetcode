@@ -1,13 +1,13 @@
 package algo
 
-import java.awt.List
-
-class MaxHeap(private val arr: ArrayList<Int> = ArrayList<Int>().apply {
-    add(HEAP_HEAD)
-}) {
+class MaxHeap(
+    private val arr: ArrayList<Int> = ArrayList<Int>().apply {
+        add(HEAP_HEAD)
+    }
+) {
 
     companion object {
-//        private const val HEAP_MAX_SIZE = 100
+        //        private const val HEAP_MAX_SIZE = 100
         private const val INDEX_NOT_EXIST = -1
         private const val NODE_NOT_EXIST = -2
         private const val HEAP_HEAD = Int.MIN_VALUE
@@ -97,18 +97,18 @@ class MaxHeap(private val arr: ArrayList<Int> = ArrayList<Int>().apply {
     }
 
     fun print() {
-        for (i in 1 .. arr.lastIndex) print("${arr[i]} ")
+        for (i in 1..arr.lastIndex) print("${arr[i]} ")
         println()
     }
 
     fun leftChild(index: Int) = if (leftChildIndex(index) != INDEX_NOT_EXIST) arr[leftChildIndex(index)]
-                                else NODE_NOT_EXIST
+    else NODE_NOT_EXIST
 
     fun rightChile(index: Int) = if (rightChildIndex(index) != INDEX_NOT_EXIST) arr[rightChildIndex(index)]
-                                 else NODE_NOT_EXIST
+    else NODE_NOT_EXIST
 
     fun parent(index: Int) = if (parentIndex(index) != INDEX_NOT_EXIST) arr[parentIndex(index)]
-                             else NODE_NOT_EXIST
+    else NODE_NOT_EXIST
 
     fun eraseLast() = arr.removeAt(lastIndex)
 
@@ -129,7 +129,7 @@ class MaxHeap(private val arr: ArrayList<Int> = ArrayList<Int>().apply {
     fun parentIndex(index: Int) =
         if (nodeExist(index / 2)) index / 2 else INDEX_NOT_EXIST
 
-    private fun nodeExist(index: Int) = index in 1 .. lastIndex
+    private fun nodeExist(index: Int) = index in 1..lastIndex
 
     internal fun swap(index1: Int, index2: Int): Boolean {
         if (!nodeExist(index1) || !nodeExist(index2)) return false

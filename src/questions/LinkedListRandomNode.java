@@ -17,8 +17,9 @@ public class LinkedListRandomNode {
 
     // Wrap it with array list.
     List<Integer> array = new ArrayList<>();
+
     public LinkedListRandomNode(ListNode head) {
-        while(head != null){
+        while (head != null) {
             array.add(head.val);
             head = head.next;
         }

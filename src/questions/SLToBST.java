@@ -1,5 +1,5 @@
 package questions;
-import com.sun.source.tree.Tree;
+
 import model.ListNode;
 import model.TreeNode;
 
@@ -21,22 +21,22 @@ import java.util.List;
  */
 public class SLToBST {
     public TreeNode sortedListToBST(ListNode head) {
-        if(head == null) return null;
+        if (head == null) return null;
         List<Integer> nums = new ArrayList<>();
-        while(head != null){
+        while (head != null) {
             nums.add(head.val);
             head = head.next;
         }
         return cutRecursive(nums);
     }
 
-    public TreeNode cutRecursive(List<Integer> nums){
+    public TreeNode cutRecursive(List<Integer> nums) {
         int medianIndex = findMedian(nums);
         TreeNode root = new TreeNode(nums.get(medianIndex));
         List<Integer> left = nums.subList(0, medianIndex);
         List<Integer> right = nums.subList(medianIndex + 1, nums.size());
-        if(!left.isEmpty()) root.left = cutRecursive(left);
-        if(!right.isEmpty()) root.right = cutRecursive(right);
+        if (!left.isEmpty()) root.left = cutRecursive(left);
+        if (!right.isEmpty()) root.right = cutRecursive(right);
 //        if(!left.isEmpty()){
 //            root.left = new TreeNode(left.get(findMedian(left)));
 //        }
@@ -47,7 +47,7 @@ public class SLToBST {
         return root;
     }
 
-    public int findMedian(List<Integer> nums){
+    public int findMedian(List<Integer> nums) {
         return nums.size() / 2;
     }
 }

@@ -36,7 +36,7 @@ class PriorityQueue(private val heap: MaxHeap) {
 
     fun printHeap() {
         if (isEmpty) return
-        for (i in heap.firstIndex .. heap.lastIndex) {
+        for (i in heap.firstIndex..heap.lastIndex) {
             print("${heap[i]} ")
         }
         println()

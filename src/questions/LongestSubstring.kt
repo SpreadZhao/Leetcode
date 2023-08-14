@@ -1,7 +1,6 @@
 package questions
 
 import java.util.*
-import kotlin.collections.HashMap
 import kotlin.math.max
 
 /**
@@ -32,19 +31,19 @@ class LongestSubstring {
     }
 
     fun lengthOfLongestSubstring2(s: String): Int {
-        if(s.length <= 1) return s.length
+        if (s.length <= 1) return s.length
         var i = 0
         var j: Int
         val sub = HashMap<Char, Int>()
         var maxLen = 0
-        while(i < s.length){    // abcabcbb
+        while (i < s.length) {    // abcabcbb
             sub[s[i]] = 1
             j = i + 1
-            while(j < s.length){
-                if(!sub.contains(s[j])){
+            while (j < s.length) {
+                if (!sub.contains(s[j])) {
                     sub[s[j]] = 1
                     j++
-                }else break
+                } else break
             }
             maxLen = max(maxLen, j - i)
             i++
@@ -55,11 +54,13 @@ class LongestSubstring {
 
     fun lengthOfLongestSubstring3(s: String): Int {
         val sub = HashMap<Char, Int>()
-        var maxLen = 0; var i = 0; var j = 0
-        while(j < s.length){
+        var maxLen = 0;
+        var i = 0;
+        var j = 0
+        while (j < s.length) {
             val ch = s[j]
             sub[ch] = sub.getOrDefault(ch, 0) + 1
-            while(sub[ch]!! > 1){
+            while (sub[ch]!! > 1) {
 //                sub[ch] = sub[ch]?.minus(1) ?: 0
                 val l = s[i]
                 sub[l] = sub[l]?.minus(1) ?: 0
@@ -74,12 +75,14 @@ class LongestSubstring {
 
     fun lengthOfLongestSubstring4(s: String): Int {
         val sub = HashMap<Char, Int>()
-        var i = 0; var j = 0; var maxLen = 0        // abcabcbb
-        while(j < s.length){
+        var i = 0;
+        var j = 0;
+        var maxLen = 0        // abcabcbb
+        while (j < s.length) {
             val ch = s[j]
-            if(!sub.contains(ch)){
+            if (!sub.contains(ch)) {
                 sub[ch] = j
-            }else{
+            } else {
                 maxLen = max(maxLen, j - i)
                 i = sub[ch]!!.plus(1)
             }
@@ -90,16 +93,18 @@ class LongestSubstring {
 
     fun lengthOfLongestSubstring5(s: String): Int {
         val sub = HashMap<Char, Int>()
-        var i = 0; var j = 0; var maxLen = 0        // abcabcbb
-        while(j < s.length){
+        var i = 0;
+        var j = 0;
+        var maxLen = 0        // abcabcbb
+        while (j < s.length) {
             val ch = s[j]
-            if(sub.contains(ch)){
+            if (sub.contains(ch)) {
 //                i = max(i, sub[ch]!!.plus(1))
                 i = sub[ch]!!.plus(1)
                 sub[ch] = j
                 maxLen = max(maxLen, j - i + 1)
                 j++
-            }else{
+            } else {
                 sub[ch] = j
                 maxLen = max(maxLen, j - i + 1)
                 j++
@@ -110,10 +115,12 @@ class LongestSubstring {
 
     fun lengthOfLongestSubstring6(s: String): Int {
         val sub = HashMap<Char, Int>()
-        var i = 0; var j = 0; var maxLen = 0        // abcabcbb
-        while(j < s.length){
+        var i = 0;
+        var j = 0;
+        var maxLen = 0        // abcabcbb
+        while (j < s.length) {
             val ch = s[j]
-            if(sub.contains(ch)){
+            if (sub.contains(ch)) {
                 i = max(i, sub[ch]!!)
             }
             sub[ch] = j + 1

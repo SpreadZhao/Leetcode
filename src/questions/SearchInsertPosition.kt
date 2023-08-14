@@ -1,7 +1,5 @@
 package questions
 
-import java.util.*
-
 /**
  * Link: [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
  */

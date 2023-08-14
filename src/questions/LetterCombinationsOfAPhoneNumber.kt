@@ -6,7 +6,7 @@ package questions
 class LetterCombinationsOfAPhoneNumber {
     fun letterCombinations(digits: String): List<String> {
         val res = ArrayList<String>()
-        if(digits == "") return res
+        if (digits == "") return res
         val builder = StringBuilder()
         print(digits, 0, builder, res)
         return res
@@ -30,6 +30,7 @@ class LetterCombinationsOfAPhoneNumber {
                 print(digits, index + 1, builder, res)
                 builder.delete(index, builder.length)
             }
+
             '3' -> {
                 builder.append('d')
                 print(digits, index + 1, builder, res)
@@ -41,6 +42,7 @@ class LetterCombinationsOfAPhoneNumber {
                 print(digits, index + 1, builder, res)
                 builder.delete(index, builder.length)
             }
+
             '4' -> {
                 builder.append('g')
                 print(digits, index + 1, builder, res)
@@ -52,6 +54,7 @@ class LetterCombinationsOfAPhoneNumber {
                 print(digits, index + 1, builder, res)
                 builder.delete(index, builder.length)
             }
+
             '5' -> {
                 builder.append('j')
                 print(digits, index + 1, builder, res)
@@ -63,6 +66,7 @@ class LetterCombinationsOfAPhoneNumber {
                 print(digits, index + 1, builder, res)
                 builder.delete(index, builder.length)
             }
+
             '6' -> {
                 builder.append('m')
                 print(digits, index + 1, builder, res)
@@ -74,6 +78,7 @@ class LetterCombinationsOfAPhoneNumber {
                 print(digits, index + 1, builder, res)
                 builder.delete(index, builder.length)
             }
+
             '7' -> {
                 builder.append('p')
                 print(digits, index + 1, builder, res)
@@ -88,6 +93,7 @@ class LetterCombinationsOfAPhoneNumber {
                 print(digits, index + 1, builder, res)
                 builder.delete(index, builder.length)
             }
+
             '8' -> {
                 builder.append('t')
                 print(digits, index + 1, builder, res)
@@ -99,6 +105,7 @@ class LetterCombinationsOfAPhoneNumber {
                 print(digits, index + 1, builder, res)
                 builder.delete(index, builder.length)
             }
+
             '9' -> {
                 builder.append('w')
                 print(digits, index + 1, builder, res)
@@ -117,16 +124,16 @@ class LetterCombinationsOfAPhoneNumber {
     }
 
     private val mapping = arrayListOf<String>(
-            "",
-            "",
-            "abc",
-            "def",
-            "ghi",
-            "jkl",
-            "mno",
-            "pqrs",
-            "tuv",
-            "wxyz"
+        "",
+        "",
+        "abc",
+        "def",
+        "ghi",
+        "jkl",
+        "mno",
+        "pqrs",
+        "tuv",
+        "wxyz"
     )
 
     private val ans = ArrayList<String>()

@@ -27,7 +27,9 @@ class QuickSort {
     }
 
     private fun partition(arr: IntArray, llow: Int, hhigh: Int): Int {
-        var low = llow; var high = hhigh; val pivot = arr[low]
+        var low = llow;
+        var high = hhigh;
+        val pivot = arr[low]
         while (low < high) {
             while (low < high && arr[high] >= pivot) high--
             swap(arr, low, high)

@@ -25,7 +25,7 @@ class MaximumSubarray {
         }
         var rightMaxSum = Int.MIN_VALUE
         sum = 0
-        for (j in mid + 1 .. high) {
+        for (j in mid + 1..high) {
             sum += array[j]
             if (sum > rightMaxSum) rightMaxSum = sum
         }

@@ -8,7 +8,7 @@ class KidsWithTheGreatestNumberOfCandies {
     fun kidsWithCandies(candies: IntArray, extraCandies: Int): List<Boolean> {
         var max = candies[0]
         for (i in 1 until candies.size) {
-            if(candies[i] > max) max = candies[i]
+            if (candies[i] > max) max = candies[i]
         }
         val res = ArrayList<Boolean>()
         for (i in candies.indices) {

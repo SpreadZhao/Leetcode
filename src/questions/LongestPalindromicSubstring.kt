@@ -25,14 +25,14 @@ class LongestPalindromicSubstring {
 
     fun longestPalindrome2(s: String): String {
         var maxStr = ""
-        if(s.isEmpty()) return maxStr
-        val isPalindrome = Array(s.length){BooleanArray(s.length)}
-        for(j in s.indices){
-            for(i in 0..j){
+        if (s.isEmpty()) return maxStr
+        val isPalindrome = Array(s.length) { BooleanArray(s.length) }
+        for (j in s.indices) {
+            for (i in j downTo 0) {
                 val judge = s[i] == s[j]
-                isPalindrome[i][j] = if(j - i > 2) isPalindrome[i + 1][j - 1] && judge
-                                     else judge
-                if(isPalindrome[i][j] && j - i + 1 > maxStr.length){
+                isPalindrome[i][j] = if (j - i > 2) isPalindrome[i + 1][j - 1] && judge
+                else judge
+                if (isPalindrome[i][j] && j - i + 1 > maxStr.length) {
                     maxStr = s.substring(i, j + 1)
                 }
             }

@@ -5,7 +5,14 @@ import exercise.*
 object TestExercise {
     fun testGraph() {
         val n = 6
-        val edges = arrayOf(intArrayOf(1, 1, 0, 0, 0, 1), intArrayOf(1, 1, 1, 0, 1, 0), intArrayOf(0, 1, 1, 1, 0, 0), intArrayOf(0, 0, 1, 1, 1, 0), intArrayOf(0, 1, 0, 1, 1, 0), intArrayOf(1, 0, 0, 0, 0, 1))
+        val edges = arrayOf(
+            intArrayOf(1, 1, 0, 0, 0, 1),
+            intArrayOf(1, 1, 1, 0, 1, 0),
+            intArrayOf(0, 1, 1, 1, 0, 0),
+            intArrayOf(0, 0, 1, 1, 1, 0),
+            intArrayOf(0, 1, 0, 1, 1, 0),
+            intArrayOf(1, 0, 0, 0, 0, 1)
+        )
         val graph = MatrixGraph(n, GraphType.UDG, edges)
         MatrixGraph.DFS(graph, 0)
     }
@@ -115,13 +122,17 @@ object TestExercise {
             intArrayOf(I, 7, I, I, 0, I),
             intArrayOf(I, 5, 10, I, I, 0)
         )
-//        ShortestPath().fasterAllPairsShortest(edges2)
+        ShortestPath().fasterAllPairsShortest(edges2)
 //        println("floyd:")
-        ShortestPath().floyd(edges2)
+//        ShortestPath().floyd(edges2)
 
     }
 
     fun queen8() {
         println(Queen8().run())
+    }
+
+    fun printThread() {
+        PrintThread().start()
     }
 }

@@ -1,8 +1,6 @@
 package questions;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -12,16 +10,6 @@ import java.util.Map;
  */
 public class WordDictionary {
 
-    class TrieNode{
-        private Map<Character, TrieNode> children;
-        private boolean isTerminal;
-
-        TrieNode(){
-            children = new HashMap<>();
-            isTerminal = false;
-        }
-    }
-
     TrieNode root;
 
     public WordDictionary() {
@@ -30,9 +18,9 @@ public class WordDictionary {
 
     public void addWord(String word) {
         TrieNode p = root;
-        for(int i = 0; i < word.length(); i++){
+        for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
-            if(!p.children.containsKey(ch))
+            if (!p.children.containsKey(ch))
                 p.children.put(ch, new TrieNode());
             p = p.children.get(ch);
         }
@@ -43,19 +31,29 @@ public class WordDictionary {
         return searchHelper(root, word, 0);
     }
 
-    private boolean searchHelper(TrieNode start, String word, int index){
-        if(index == word.length() && start.isTerminal) return true;
-        if(index >= word.length()) return false;
+    private boolean searchHelper(TrieNode start, String word, int index) {
+        if (index == word.length() && start.isTerminal) return true;
+        if (index >= word.length()) return false;
         char ch = word.charAt(index);
-        if(ch == '.'){
+        if (ch == '.') {
             index++;
-            for(TrieNode child : start.children.values()){
-                if(searchHelper(child, word, index)) return true;
+            for (TrieNode child : start.children.values()) {
+                if (searchHelper(child, word, index)) return true;
             }
             return false;
-        }else{
-            if(!start.children.containsKey(ch)) return false;
+        } else {
+            if (!start.children.containsKey(ch)) return false;
             return searchHelper(start.children.get(ch), word, ++index);
+        }
+    }
+
+    class TrieNode {
+        private Map<Character, TrieNode> children;
+        private boolean isTerminal;
+
+        TrieNode() {
+            children = new HashMap<>();
+            isTerminal = false;
         }
     }
 }

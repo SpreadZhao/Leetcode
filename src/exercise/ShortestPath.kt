@@ -77,7 +77,7 @@ class ShortestPath {
                     changed = true
                 }
             }
-            print("res: "); res.forEach { print("${ if (it == Int.MAX_VALUE) "I" else it } ") }
+            print("res: "); res.forEach { print("${if (it == Int.MAX_VALUE) "I" else it} ") }
             println()
             print("predecessor: "); predecessor.forEach { print("$it ") }
             println()

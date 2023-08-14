@@ -31,10 +31,10 @@ class ReverseInteger {
         var res = 0
         val BOUNDARY_P = Int.MAX_VALUE / 10
         val BOUNDARY_N = Int.MIN_VALUE / 10
-        while(xx != 0){
+        while (xx != 0) {
             val a = xx % 10
-            if(res > BOUNDARY_P || res == BOUNDARY_P && a > 7) return 0
-            if(res < BOUNDARY_N || res == BOUNDARY_N && a < -8) return 0
+            if (res > BOUNDARY_P || res == BOUNDARY_P && a > 7) return 0
+            if (res < BOUNDARY_N || res == BOUNDARY_N && a < -8) return 0
             res = res * 10 + a
             xx /= 10
         }

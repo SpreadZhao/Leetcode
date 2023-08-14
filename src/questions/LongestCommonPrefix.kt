@@ -23,8 +23,8 @@ class LongestCommonPrefix {
     fun longestCommonPrefix2(strs: Array<String>): String {
         strs.sort()
         val builder = StringBuilder();
-        for(i in 0 until strs[0].length){
-            if(strs[0][i] != strs.last()[i]) break
+        for (i in 0 until strs[0].length) {
+            if (strs[0][i] != strs.last()[i]) break
             builder.append(strs[0][i])
         }
         return builder.toString()

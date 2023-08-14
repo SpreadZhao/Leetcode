@@ -11,7 +11,7 @@ import model.TreeNode;
  */
 public class SymmetricTree {
     public boolean isSymmetric(TreeNode root) {
-        if(root == null) return true;
+        if (root == null) return true;
         //TreeNode newRoot = new TreeNode(root.val);
         //invertTree(root, newRoot);
         TreeNode save = saveTree(root);
@@ -19,15 +19,15 @@ public class SymmetricTree {
         return preOrderCompare(root, save);
     }
 
-    public TreeNode saveTree(TreeNode root){
+    public TreeNode saveTree(TreeNode root) {
         TreeNode newRoot = new TreeNode(root.val);
-        if(root.left != null) newRoot.left = saveTree(root.left);
-        if(root.right != null) newRoot.right = saveTree(root.right);
+        if (root.left != null) newRoot.left = saveTree(root.left);
+        if (root.right != null) newRoot.right = saveTree(root.right);
         return newRoot;
     }
 
-    public void invertTree(TreeNode root){
-        if(root == null) return;
+    public void invertTree(TreeNode root) {
+        if (root == null) return;
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
@@ -35,7 +35,7 @@ public class SymmetricTree {
         invertTree(root.right);
     }
 
-    public boolean preOrderCompare(TreeNode a, TreeNode b){
+    public boolean preOrderCompare(TreeNode a, TreeNode b) {
 //        boolean flag;
 //        if(a != null && b != null) flag = a.val == b.val;
 //        else if(a != null) flag = false;
@@ -67,13 +67,13 @@ public class SymmetricTree {
 //        return flag;
 
         boolean flag = true;
-        if(a.val != b.val) flag = false;
-        if(a.left != null && b.left != null) flag &= preOrderCompare(a.left, b.left);
-        else if(a.left == null && b.left == null) {}
-        else flag = false;
-        if(a.right != null && b.right != null) flag &= preOrderCompare(a.right, b.right);
-        else if(a.right == null && b.right == null) {}
-        else flag = false;
+        if (a.val != b.val) flag = false;
+        if (a.left != null && b.left != null) flag &= preOrderCompare(a.left, b.left);
+        else if (a.left == null && b.left == null) {
+        } else flag = false;
+        if (a.right != null && b.right != null) flag &= preOrderCompare(a.right, b.right);
+        else if (a.right == null && b.right == null) {
+        } else flag = false;
         return flag;
     }
 }

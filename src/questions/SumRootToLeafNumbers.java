@@ -19,9 +19,6 @@ public class SumRootToLeafNumbers {
 //        return sum * (int)Math.pow(10, getLen(left)) + left + sum * (int)Math.pow(10, getLen(right)) + right;
 
 
-
-
-
 //        int leftSum = 0, rightSum = 0;
 //        if(root.left == null && root.right == null) return root.val;
 //        if(root.left != null) leftSum += sumNumbers(root.left);
@@ -32,19 +29,19 @@ public class SumRootToLeafNumbers {
         return recursive(root, 0);
     }
 
-    public int recursive(TreeNode root, int currSum){
+    public int recursive(TreeNode root, int currSum) {
         currSum = currSum * 10 + root.val;
-        if(root.left == null && root.right == null) return currSum;
+        if (root.left == null && root.right == null) return currSum;
         int left = 0, right = 0;
-        if(root.left != null) left = recursive(root.left, currSum);
-        if(root.right != null) right = recursive(root.right, currSum);
+        if (root.left != null) left = recursive(root.left, currSum);
+        if (root.right != null) right = recursive(root.right, currSum);
         return left + right;
     }
 
 
-    public int getLen(int n){
+    public int getLen(int n) {
         int len = 0;
-        while(n > 0){ // 9
+        while (n > 0) { // 9
             n /= 10;
             len++;
         }

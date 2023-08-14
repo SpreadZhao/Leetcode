@@ -27,8 +27,8 @@ class MaxDepthOfBinaryTree {
     }
 
     fun maxDepth2(root: TreeNode?): Int {
-        if(root == null) return 0
-        if(root.left == null && root.right == null) return 1
+        if (root == null) return 0
+        if (root.left == null && root.right == null) return 1
         var max = 1
         max += max(maxDepth2(root.left), maxDepth2(root.right))
         return max

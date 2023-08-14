@@ -40,26 +40,24 @@ public class MinimumScoreOfAPathBTC {
         boolean[] visited = new boolean[n];
 
 
-
-
         return DFS_Core(n, roads, 0, visited, neighbors, Integer.MAX_VALUE);
     }
 
-    private int DFS_Core(int n, int[][] roads, int index, boolean[] visited, Map<Integer, List<Map.Entry<Integer, Integer>>> neighbors, int minDis){
+    private int DFS_Core(int n, int[][] roads, int index, boolean[] visited, Map<Integer, List<Map.Entry<Integer, Integer>>> neighbors, int minDis) {
         visited[index] = true;
-        for(Map.Entry<Integer, Integer> neighbor : neighbors.get(index + 1)){
+        for (Map.Entry<Integer, Integer> neighbor : neighbors.get(index + 1)) {
 //            minDis = Math.min(minDis, lookDis(index + 1, neighbor, roads));
             minDis = Math.min(minDis, neighbor.getValue());
-            if(!visited[neighbor.getKey() - 1]){
+            if (!visited[neighbor.getKey() - 1]) {
                 minDis = Math.min(minDis, DFS_Core(n, roads, neighbor.getKey() - 1, visited, neighbors, minDis));
             }
         }
         return minDis;
     }
 
-    private int lookDis(int a, int b, int[][] roads){
-        for(int[] road : roads){
-            if((road[0] == a && road[1] == b) || (road[1] == a && road[0] == b))
+    private int lookDis(int a, int b, int[][] roads) {
+        for (int[] road : roads) {
+            if ((road[0] == a && road[1] == b) || (road[1] == a && road[0] == b))
                 return road[2];
         }
         return Integer.MAX_VALUE;

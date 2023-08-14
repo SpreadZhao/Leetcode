@@ -3,8 +3,9 @@ package exercise
 import kotlin.math.max
 
 class KnapSack {
-//    inner class ItemValue(val profit: Int, val weight: Int)
+    //    inner class ItemValue(val profit: Int, val weight: Int)
     class ItemValue(val profit: Int, val weight: Int)
+
     fun getMaxValue(arr: Array<ItemValue>, capacity: Int): Double {
         /** Kotlin anonymous class: object
          * arr.sortWith(object : Comparator<ItemValue> {
@@ -60,13 +61,13 @@ class KnapSack {
     }
 
     fun zeroOneKnap2(capacity: Int, wt: IntArray, pft: IntArray, n: Int): Int {
-        val dp = Array(n + 1) { IntArray(capacity + 1){-1} }
+        val dp = Array(n + 1) { IntArray(capacity + 1) { -1 } }
         return zok(capacity, wt, pft, n, dp)
     }
 
     private fun zok(capacity: Int, wt: IntArray, pft: IntArray, n: Int, dp: Array<IntArray>): Int {
         if (n == 0 || capacity == 0) return 0
-        if(dp[n][capacity] != -1) return dp[n][capacity]
+        if (dp[n][capacity] != -1) return dp[n][capacity]
         return if (wt[n - 1] > capacity) {
             dp[n][capacity] = zok(capacity, wt, pft, n - 1, dp)
             dp[n][capacity]
@@ -80,14 +81,14 @@ class KnapSack {
     }
 
     fun zeroOneKnap3(capacity: Int, wt: IntArray, pft: IntArray, n: Int): Int {
-        val dp = Array(n + 1) { IntArray(capacity + 1) {0} }
+        val dp = Array(n + 1) { IntArray(capacity + 1) { 0 } }
         for (i in 0..n) {
             for (w in 0..capacity) {
                 dp[i][w] = if (i == 0 || w == 0) 0
-                    else if (wt[i - 1] <= w)
-                        max(pft[i - 1] + dp[i - 1][w - wt[i - 1]], dp[i - 1][w])
-                    else
-                        dp[i - 1][w]
+                else if (wt[i - 1] <= w)
+                    max(pft[i - 1] + dp[i - 1][w - wt[i - 1]], dp[i - 1][w])
+                else
+                    dp[i - 1][w]
             }
         }
         return dp[n][capacity]
@@ -110,8 +111,10 @@ class KnapSack {
             choose(capacity, wt, pft, curr + 1, n, isChosen)
         }
     }
+
     private fun checkMax(capacity: Int, wt: IntArray, pft: IntArray, n: Int, isChosen: BooleanArray) {
-        var weight = 0; var profit = 0
+        var weight = 0;
+        var profit = 0
         for (i in isChosen.indices) {
             if (isChosen[i]) {
                 weight += wt[i]

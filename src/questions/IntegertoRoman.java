@@ -8,7 +8,7 @@ public class IntegertoRoman {
         int every_digit;
         int level = 1;
         StringBuilder builder = new StringBuilder();
-        while(num > 0){
+        while (num > 0) {
             every_digit = num % 10;
             builder.insert(0, getRomanByLevel(every_digit, level++));
             num /= 10;
@@ -16,7 +16,7 @@ public class IntegertoRoman {
         return builder.toString();
     }
 
-    public String getRomanByLevel(int num, int level){
+    public String getRomanByLevel(int num, int level) {
         switch (level) {
             case 1 -> {
                 return switch (num) {

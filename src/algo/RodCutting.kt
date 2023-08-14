@@ -10,7 +10,7 @@ class RodCutting {
         val cut = IntArray(profit.size)
         dp[0] = 0
         for (j in 1 until profit.size) {
-            for (i in 1 .. j) {
+            for (i in 1..j) {
                 if (dp[j] < profit[i] + dp[j - i]) {
                     dp[j] = profit[i] + dp[j - i]
                     cut[j] = i
@@ -28,7 +28,7 @@ class RodCutting {
     private fun bruceForce(profit: IntArray, n: Int): Int {
         if (n == 0) return 0
         var res = Int.MIN_VALUE
-        for (i in 1 .. n) {
+        for (i in 1..n) {
             res = max(
                 res,
                 profit[i] + bruceForce(profit, n - i)
