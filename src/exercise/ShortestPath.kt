@@ -47,16 +47,19 @@ class ShortestPath {
     val threshold = 10e7
 
     fun floyd(link: Array<IntArray>): Int {
+        val predecessor = Array(link.size) { IntArray(link.size) { -1 } }
         for (k in link.indices) {
             for (i in link.indices) {
                 for (j in link.indices) {
                     if (link[i][k] == Int.MAX_VALUE || link[k][j] == Int.MAX_VALUE) continue
                     if (link[i][j] > link[i][k] + link[k][j]) {
                         link[i][j] = link[i][k] + link[k][j]
+                        predecessor[i][j] = k
                     }
                 }
             }
         }
+
         return 1
     }
 

@@ -56,7 +56,7 @@ object Main {
 //        schedule()
 //        shortest()
 //        differenceOfTwoArrays()
-//        shortest2()
+        shortest2()
 //        queen8()
 //        insertionSort()
 //        mergeSort()
