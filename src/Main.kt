@@ -1,3 +1,4 @@
+import test.Test.reverseListBetween
 import test.TestExercise.printThread
 import test.TestExercise.shortest2
 
@@ -72,8 +73,8 @@ object Main {
 
 //        while (true);
 //        reverseList()
-//        reverseListBetween()
-        printThread()
+        reverseListBetween()
+//        printThread()
 
         val etime = System.currentTimeMillis()
         println("time: " + (etime - stime))

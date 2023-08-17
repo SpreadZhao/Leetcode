@@ -3382,11 +3382,11 @@ object Test {
     }
 
     fun reverseListBetween() {
-//        val node5 = ListNode(5)
-//        val node4 = ListNode(4, node5)
-//        val node3 = ListNode(3, node4)
-        val node2 = ListNode(2)
+        val node5 = ListNode(5)
+        val node4 = ListNode(4, node5)
+        val node3 = ListNode(3, node4)
+        val node2 = ListNode(2, node3)
         val node1 = ListNode(1, node2)
-        ListNode.printList(ReverseList().reverseBetween(node1, 1, 2))
+        ListNode.printList(ReverseList().reverseBetween2(node1, 2, 4))
     }
 }

@@ -24,6 +24,60 @@ class ReverseList {
         return null
     }
 
+    fun reverseBetween2(head: ListNode?, left: Int, right: Int): ListNode? {
+        val list1 = if (left == 1) null else subList(head, 1, left - 1)
+        val list2 = reverseList(subList(head, left, right))
+        val size = calSize(head)
+        val list3 = if (size == right) null else subList(head, right + 1, size)
+        return mergeList(mergeList(list1, list2), list3)
+    }
+
+    private fun calSize(head: ListNode?) = if (head == null) 0 else {
+        var len = 1
+        var p = head
+        while (p!!.next != null) {
+            len++
+            p = p.next
+        }
+        len
+    }
+
+    private fun subList(head: ListNode?, left: Int, right: Int): ListNode? {
+        if (head == null) return null
+        var p = head
+        for (i in 1 until left) {
+            if (p != null) p = p.next
+        }
+        if (p == null) return null
+        val newHead = ListNode(p.`val`)
+        var resTail = newHead
+        for (i in left until right) {
+            if (p != null) {
+                p = p.next
+                val newNode = ListNode(p.`val`)
+                resTail.next = newNode
+                resTail = newNode
+            }
+        }
+        return newHead
+    }
+
+    private fun mergeList(head1: ListNode?, head2: ListNode?) = if (head1 == null && head2 == null) {
+        null
+    } else if (head1 == null) {
+        head2
+    } else if (head2 == null) {
+        head1
+    } else {
+        var head1Tail = head1
+        while (head1Tail!!.next != null) {
+            head1Tail = head1Tail.next
+        }
+        head1Tail.next = head2
+        head1
+    }
+
+
     fun reverseBetween(head: ListNode?, left: Int, right: Int): ListNode? {
         if (head == null) return null
         if (head.next == null) return head
