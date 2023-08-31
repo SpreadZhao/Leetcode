@@ -1,18 +1,20 @@
+import test.Test.listIntersection
+import test.Test.permutation
 import test.Test.reverseListBetween
+import test.TestAlgo.maxHeap
 import test.TestExercise.printThread
 import test.TestExercise.shortest2
 
-object Main {
-    @JvmStatic
-    fun main(args: Array<String>) {
 
-        val stime = System.currentTimeMillis()
+fun main(args: Array<String>) {
+
+    val stime = System.currentTimeMillis()
 
 
 //        Test.romanInteger("MCMXCIV");
 //        longestCommonPrefix();
 
-        //        Test.sum();
+    //        Test.sum();
 //        Test.addTwoNumbers();
 //        longestSubstring();
 //        Test.longestPalindromicSubstring();
@@ -63,7 +65,7 @@ object Main {
 //        insertionSort()
 //        mergeSort()
 //        maximumSubarray()
-//        maxHeap()
+//    maxHeap()
 //        quickSort()
 //        countingSort()
 //        rodCutting()
@@ -73,12 +75,37 @@ object Main {
 
 //        while (true);
 //        reverseList()
-        reverseListBetween()
+//        reverseListBetween()
 //        printThread()
+//    permutation()
+    listIntersection()
 
-        val etime = System.currentTimeMillis()
-        println("time: " + (etime - stime))
-    }
-
-
+    val etime = System.currentTimeMillis()
+    println("time: " + (etime - stime))
 }
+
+
+//fun main(args: Array<String>) {
+//    val num1 = "34567"
+//    val num2 = "234"
+//    println(plusLargeNumber(num1, num2))
+//}
+//
+//fun plusLargeNumber(num1: String, num2: String): String {
+//    // 3 4 5 6 7
+//    //     2 3 4
+//    var i = num1.lastIndex
+//    var j = num2.lastIndex
+//    var carry = 0
+//    val res = StringBuilder()
+//    while (i >= 0 || j >= 0) {
+//        val a = if (i >= 0) num1[i].toInt() else 0
+//        val b = if (j >= 0) num2[j].toInt() else 0
+//        val tempRes = (a + b + carry) % 10
+//        carry = (a + b) / 10
+//        res.insert(0, tempRes.toString())
+//        if (i >= 0) i--
+//        if (j >= 0) j--
+//    }
+//    return res.toString()
+//}

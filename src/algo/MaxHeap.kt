@@ -37,6 +37,7 @@ class MaxHeap(
         arr.addAll(array.asList())
     }
 
+    // 为什么从一半开始？因为只有一半结点有子节点啊!
     fun build() = apply {
         val startIndex = lastIndex / 2
         for (i in startIndex downTo 1) {
@@ -55,17 +56,7 @@ class MaxHeap(
     fun heapify(i: Int) {
         var index = i
         while (index < lastIndex) {
-            var maxIndex = index
-
-            val leftIndex = leftChildIndex(index)
-            if (nodeExist(leftIndex) && arr[maxIndex] < arr[leftIndex]) {
-                maxIndex = leftIndex
-            }
-
-            val rightIndex = rightChildIndex(index)
-            if (nodeExist(rightIndex) && arr[maxIndex] < arr[rightIndex]) {
-                maxIndex = rightIndex
-            }
+            val maxIndex = findMaxOfThree(index)
 
             // Parent is the largest
             if (index == maxIndex) break
@@ -76,20 +67,25 @@ class MaxHeap(
     }
 
     fun heapifyRecursive(i: Int) {
-        var maxIndex = i
-        val leftIndex = leftChildIndex(i)
-        if (nodeExist(leftIndex) && arr[maxIndex] < arr[leftIndex]) {
-            maxIndex = leftIndex
-        }
-        val rightIndex = rightChildIndex(i)
-        if (nodeExist(rightIndex) && arr[maxIndex] < arr[rightIndex]) {
-            maxIndex = rightIndex
-        }
+        val maxIndex = findMaxOfThree(i)
         // Parent is not the largest
         if (i != maxIndex) {
             swap(i, maxIndex)
             heapifyRecursive(maxIndex)
         }
+    }
+
+    private fun findMaxOfThree(start: Int): Int {
+        var maxIndex = start
+        val leftIndex = leftChildIndex(maxIndex)
+        val rightIndex = rightChildIndex(maxIndex)
+        if (nodeExist(leftIndex) && arr[maxIndex] < arr[leftIndex]) {
+            maxIndex = leftIndex
+        }
+        if (nodeExist(rightIndex) && arr[maxIndex] < arr[rightIndex]) {
+            maxIndex = rightIndex
+        }
+        return maxIndex
     }
 
     fun add(num: Int) {

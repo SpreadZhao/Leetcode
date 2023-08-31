@@ -3,7 +3,9 @@ package questions
 import model.ListNode
 import kotlin.math.min
 
-
+/**
+ * https://leetcode.cn/problems/merge-k-sorted-lists/description/
+ */
 class MergeTwoLists {
     fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
         if (list1 == null) return list2
@@ -56,5 +58,16 @@ class MergeTwoLists {
     } else {
         list2.next = mergeTwoLists2(list1, list2.next)
         list2
+    }
+
+    fun mergeKLists(lists: Array<ListNode?>): ListNode? {
+        if (lists.isEmpty()) return null
+        if (lists.size == 1) return lists[0]
+        if (lists.size == 2) return mergeTwoLists2(lists[0], lists[1])
+        var res = mergeTwoLists2(lists[0], lists[1])
+        for (i in 2 until lists.size) {
+            res = mergeTwoLists2(res, lists[i])
+        }
+        return res
     }
 }

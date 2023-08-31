@@ -2,6 +2,9 @@ package questions
 
 import kotlin.math.min
 
+/**
+ * https://leetcode.cn/problems/spiral-matrix/description/
+ */
 class SpiralMatrix {
     fun spiralOrder(matrix: Array<IntArray>): List<Int> {
         var k = 0

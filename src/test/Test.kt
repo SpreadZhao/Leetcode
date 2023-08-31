@@ -3389,4 +3389,21 @@ object Test {
         val node1 = ListNode(1, node2)
         ListNode.printList(ReverseList().reverseBetween2(node1, 2, 4))
     }
+
+    fun permutation() {
+        val nums = intArrayOf(1, 2, 3)
+        println(Permutation().permute(nums))
+    }
+
+    fun listIntersection() {
+        val node6 = ListNode(6)
+        val node5 = ListNode(5, node6)
+        val node4 = ListNode(4, node5)
+        val node7 = ListNode(7, node4)
+        val node8 = ListNode(8, node7)
+        val node3 = ListNode(3, node4)
+        val node2 = ListNode(2, node3)
+        val node1 = ListNode(1, node2)
+        println(ListIntersection().getIntersectionNode(node1, node8)?.`val`)
+    }
 }
