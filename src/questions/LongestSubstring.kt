@@ -23,10 +23,10 @@ class LongestSubstring {
             }
             i++
         }
-        if (lens.isEmpty() || !chs.isEmpty()) { // Any else branch in for loop is not executed
+        if (lens.isEmpty() || chs.isNotEmpty()) { // Any else branch in for loop is not executed
             lens.add(chs.size)
         }
-        Collections.sort(lens)
+        lens.sort()
         return lens[lens.size - 1]
     }
 
@@ -54,8 +54,8 @@ class LongestSubstring {
 
     fun lengthOfLongestSubstring3(s: String): Int {
         val sub = HashMap<Char, Int>()
-        var maxLen = 0;
-        var i = 0;
+        var maxLen = 0
+        var i = 0
         var j = 0
         while (j < s.length) {
             val ch = s[j]
