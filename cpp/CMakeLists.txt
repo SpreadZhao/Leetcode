@@ -5,7 +5,7 @@ include(CTest)
 enable_testing()
 
 add_executable(cpp 
-main.cpp 
+main.cpp
 Questions/LongestSubString.cpp
 )
 
