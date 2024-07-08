@@ -1,0 +1,1 @@
+g++ main.cpp .\Questions\Solution.cpp -o out\main

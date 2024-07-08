@@ -6,7 +6,7 @@ enable_testing()
 
 add_executable(cpp 
 main.cpp
-Questions/LongestSubString.cpp
+Questions/Solution.cpp
 )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

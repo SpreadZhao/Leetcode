@@ -1,13 +1,14 @@
-#include "Questions/questions.hpp"
+#include "Questions/Solution.h"
 
-void lengthOfLongestSubstring();
-
-int main() {
-    lengthOfLongestSubstring();
-    return 0;
+void AddBinary() {
+    Solution s;
+    string a = "101";
+    string b = "10101";
+    string str = s.addBinary(a, b);
+    cout << "str: " << str;
 }
 
-void lengthOfLongestSubstring() {
-    LongestSubString lss;
-    cout << "lss: " << lss.lengthOfLongestSubstring("abcabcbb") << endl;
+int main() {
+    AddBinary();
+    return 0;
 }
