@@ -1,1 +1,1 @@
-g++ main.cpp .\Questions\Solution.cpp -o out\main
+g++ main.cpp .\Questions\Solution.cpp .\Questions\UnionFind.cpp -o out\main
