@@ -33,8 +33,8 @@ string Solution::addBinary(string a, string b) {
         res.insert(res.begin(), 1);
     }
     stringstream ss;
-    for (int i = 0; i < res.size(); i++) {
-        ss << res[i];
+    for (int re : res) {
+        ss << re;
     }
     return ss.str();
 }
@@ -84,4 +84,26 @@ vector<vector<string>> Solution::accountsMerge(vector<vector<string>>& accounts)
         merged.emplace_back(account);
     }
     return merged;
+}
+
+int Solution::numRescueBoats(vector<int> &people, int limit) {
+    int i = 0, j = people.size() - 1;
+    std::sort(people.begin(), people.end());
+    int numOfBoats = 0;
+    while (i <= j) {
+        if (i == j) {
+            numOfBoats++;
+            break;
+        }
+        int heavy = people.at(j);
+        int light = people.at(i);
+        if (heavy + light <= limit) {
+            i++;
+            j--;
+        } else {
+            j--;
+        }
+        numOfBoats++;
+    }
+    return numOfBoats;
 }

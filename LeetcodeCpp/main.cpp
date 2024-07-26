@@ -6,7 +6,7 @@ Solution solution;
 void AddBinary() {
     string a = "101";
     string b = "10101";
-    string str = solution.addBinary(a, b);
+    string str = Solution::addBinary(a, b);
     cout << "str: " << str;
 }
 
@@ -17,7 +17,7 @@ void AccountsMerge() {
             {"Mary", "mary@mail.com"},
             {"John", "johnnybravo@mail.com"}
     };
-    vector<vector<string>> res = solution.accountsMerge(vec);
+    vector<vector<string>> res = Solution::accountsMerge(vec);
     for (const auto& row : res) {
         for (int i = 0; i < row.size(); i++) {
             if (i == 0) {
@@ -30,8 +30,15 @@ void AccountsMerge() {
     }
 }
 
+void BoatsToSavePeople() {
+    vector<int> people =  {3, 5, 3, 4};
+    int limit = 5;
+    cout << Solution::numRescueBoats(people, limit);
+}
+
 int main() {
     // AddBinary();
-    AccountsMerge();
+//    AccountsMerge();
+    BoatsToSavePeople();
     return 0;
 }

@@ -8,9 +8,11 @@
 
 class Solution {
 public:
-    string addBinary(string a, string b);
+    static string addBinary(string a, string b);
     // https://leetcode.cn/problems/accounts-merge/description/
-    vector<vector<string>> accountsMerge(vector<vector<string>>& accounts);
+    static vector<vector<string>> accountsMerge(vector<vector<string>>& accounts);
+    // https://leetcode.cn/problems/boats-to-save-people/description/
+    static int numRescueBoats(vector<int>& people, int limit);
 };
 
 #endif //LEETCODECPP_SOLUTION_H
