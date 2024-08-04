@@ -3,6 +3,7 @@
 //
 #include "Solution.h"
 #include "../Util/UnionFind.h"
+#include "../Util/CommonUtil.h"
 
 string Solution::addBinary(string a, string b) {
     int i = a.size() - 1;
@@ -106,4 +107,79 @@ int Solution::numRescueBoats(vector<int> &people, int limit) {
         numOfBoats++;
     }
     return numOfBoats;
+}
+
+int findNext1(vector<int> &flowerbed, int start) {
+    for (int i = start + 1; i < flowerbed.size(); ++i) {
+        int flower = flowerbed.at(i);
+        if (flower == 1) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+bool Solution::canPlaceFlowers(vector<int> &flowerbed, int n) {
+    int zeroCount = 0, lastIndexOf1 = 0, indexOf1 = 0, flowerCount = 0;
+    // Find first 1
+    int first1Index = findNext1(flowerbed, -1);
+    if (first1Index >= 0) {
+        zeroCount = first1Index;
+        if (isEven(zeroCount)) {
+            flowerCount += zeroCount / 2;
+        } else {
+            flowerCount += (zeroCount - 1) / 2;
+        }
+        indexOf1 = first1Index;
+        lastIndexOf1 = first1Index;
+        while ((indexOf1 = findNext1(flowerbed, indexOf1)) >= 0) {
+            zeroCount = indexOf1 - lastIndexOf1 - 1;
+            if (isEven(zeroCount)) {
+                flowerCount += zeroCount / 2 - 1;
+            } else {
+                flowerCount += (zeroCount + 1) / 2 - 1;
+            }
+            lastIndexOf1 = indexOf1;
+        }
+        if (lastIndexOf1 < flowerbed.size() - 1) {
+            zeroCount = flowerbed.size() - lastIndexOf1 - 1;
+            if (isEven(zeroCount)) {
+                flowerCount += zeroCount / 2;
+            } else {
+                flowerCount += (zeroCount - 1) / 2;
+            }
+        }
+    } else {
+        zeroCount = flowerbed.size();
+        if (isEven(zeroCount)) {
+            flowerCount += zeroCount / 2;
+        } else {
+            flowerCount += (zeroCount + 1) / 2;
+        }
+    }
+    return flowerCount >= n;
+}
+
+int findNext12(vector<int> &flowerbed, int start) {
+    for (int i = start + 1; i < flowerbed.size(); ++i) {
+        int flower = flowerbed.at(i);
+        if (flower == 1) {
+            return i;
+        }
+    }
+    return flowerbed.size();
+}
+
+bool Solution::canPlaceFlowers2(vector<int> &flowerbed, int n) {
+    int i = -1, j = -1, flowerCount = 0;
+    // https://stackoverflow.com/questions/16250058/why-is-1-a-size-false-even-though-stdvectors-size-is-positive
+    while (i == -1 || i < flowerbed.size()) {
+        j = findNext12(flowerbed, i);
+        int zeroCount = j - i - 1;
+        if (i == -1) zeroCount++;
+        if (j == flowerbed.size()) zeroCount++;
+        flowerCount += zeroCount == 0 ? 0 : (zeroCount + 1) / 2 - 1;
+        i = j;
+    }
+    return flowerCount >= n;
 }

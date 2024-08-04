@@ -36,9 +36,16 @@ void BoatsToSavePeople() {
     cout << Solution::numRescueBoats(people, limit);
 }
 
+void CanPlaceFlowers() {
+    vector<int> flowerbed = {1,0,0,0,1};
+    int n = 1;
+    cout << Solution::canPlaceFlowers2(flowerbed, n);
+}
+
 int main() {
     // AddBinary();
 //    AccountsMerge();
-    BoatsToSavePeople();
+//    BoatsToSavePeople();
+    CanPlaceFlowers();
     return 0;
 }

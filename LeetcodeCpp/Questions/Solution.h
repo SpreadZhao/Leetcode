@@ -13,6 +13,9 @@ public:
     static vector<vector<string>> accountsMerge(vector<vector<string>>& accounts);
     // https://leetcode.cn/problems/boats-to-save-people/description/
     static int numRescueBoats(vector<int>& people, int limit);
+    // https://leetcode.cn/problems/can-place-flowers/description/
+    static bool canPlaceFlowers(vector<int> &flowerbed, int n);
+    static bool canPlaceFlowers2(vector<int> &flowerbed, int n);
 };
 
 #endif //LEETCODECPP_SOLUTION_H

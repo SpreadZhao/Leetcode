@@ -8,4 +8,6 @@ add_executable(LeetcodeCpp main.cpp
         Questions/Solution.h
         Questions/Solution.cpp
         Util/UnionFind.h
-        Util/UnionFind.cpp)
+        Util/UnionFind.cpp
+        Util/CommonUtil.cpp
+        Util/CommonUtil.h)
