@@ -5,7 +5,7 @@
 #ifndef LEETCODECPP_UNIONFIND_H
 #define LEETCODECPP_UNIONFIND_H
 
-#include "../Questions/common.h"
+#include "../common.h"
 
 class UnionFind {
 public:

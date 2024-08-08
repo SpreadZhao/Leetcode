@@ -125,7 +125,7 @@ bool Solution::canPlaceFlowers(vector<int> &flowerbed, int n) {
     int first1Index = findNext1(flowerbed, -1);
     if (first1Index >= 0) {
         zeroCount = first1Index;
-        if (isEven(zeroCount)) {
+        if (CommonUtil::isEven(zeroCount)) {
             flowerCount += zeroCount / 2;
         } else {
             flowerCount += (zeroCount - 1) / 2;
@@ -134,7 +134,7 @@ bool Solution::canPlaceFlowers(vector<int> &flowerbed, int n) {
         lastIndexOf1 = first1Index;
         while ((indexOf1 = findNext1(flowerbed, indexOf1)) >= 0) {
             zeroCount = indexOf1 - lastIndexOf1 - 1;
-            if (isEven(zeroCount)) {
+            if (CommonUtil::isEven(zeroCount)) {
                 flowerCount += zeroCount / 2 - 1;
             } else {
                 flowerCount += (zeroCount + 1) / 2 - 1;
@@ -143,7 +143,7 @@ bool Solution::canPlaceFlowers(vector<int> &flowerbed, int n) {
         }
         if (lastIndexOf1 < flowerbed.size() - 1) {
             zeroCount = flowerbed.size() - lastIndexOf1 - 1;
-            if (isEven(zeroCount)) {
+            if (CommonUtil::isEven(zeroCount)) {
                 flowerCount += zeroCount / 2;
             } else {
                 flowerCount += (zeroCount - 1) / 2;
@@ -151,7 +151,7 @@ bool Solution::canPlaceFlowers(vector<int> &flowerbed, int n) {
         }
     } else {
         zeroCount = flowerbed.size();
-        if (isEven(zeroCount)) {
+        if (CommonUtil::isEven(zeroCount)) {
             flowerCount += zeroCount / 2;
         } else {
             flowerCount += (zeroCount + 1) / 2;
@@ -182,4 +182,12 @@ bool Solution::canPlaceFlowers2(vector<int> &flowerbed, int n) {
         i = j;
     }
     return flowerCount >= n;
+}
+
+int Solution::makeConnected(int n, vector<vector<int>>& connections) {
+    if (connections.size() < n - 1) {
+        return -1;
+    }
+    CommonUtil::DFSResponse response = CommonUtil::dfs(n, connections);
+    return response.islandNum - 1;
 }

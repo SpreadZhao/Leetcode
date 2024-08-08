@@ -42,10 +42,21 @@ void CanPlaceFlowers() {
     cout << Solution::canPlaceFlowers2(flowerbed, n);
 }
 
+void MakeConnected() {
+    int n = 4;
+    vector<vector<int>> connections = {
+        {0, 1},
+        {0, 2},
+        {1, 2}
+    };
+    cout << Solution::makeConnected(n, connections);
+}
+
 int main() {
     // AddBinary();
 //    AccountsMerge();
 //    BoatsToSavePeople();
-    CanPlaceFlowers();
+    // CanPlaceFlowers();
+    MakeConnected();
     return 0;
 }
